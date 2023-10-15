@@ -1,0 +1,654 @@
+<div class="sheet-Wrapper">
+	<div class="tab-selection" style="padding-bottom: 10px">
+		<p align="center">
+			<b><i><span>Paragon</span>:</i></b>         
+			<select class="sheet-ParagonSelect" name="attr_ParagonName" >
+				<option class="sheet-ParagonSelect" value="1" checked="checked">Dictator</option>
+				<option class="sheet-ParagonSelect" value="2">Fool</option>
+				<option class="sheet-ParagonSelect" value="3">Emotion Knight</option>
+				<option class="sheet-ParagonSelect" value="4">Neo</option>
+				<option class="sheet-ParagonSelect" value="5">Godbinder</option>
+				<option class="sheet-ParagonSelect" value="6">Master</option>
+			</select>   
+		</p>
+		
+		<div align="right">
+			<button type="action" name="act_basic" >Basic</button>
+			<button type="action" name="act_advancement" >Advancement</button>
+			<button type="action" name="act_gods" >Gods</button>
+		</div>
+	</div>
+
+	<input type="radio" name="attr_ParagonName" value="1" checked="checked">
+	<input type="radio" name="attr_ParagonName" value="2">
+	<input type="radio" name="attr_ParagonName" value="3">
+	<input type="radio" name="attr_ParagonName" value="4">
+	<input type="radio" name="attr_ParagonName" value="5">
+	<input type="radio" name="attr_ParagonName" value="6">
+	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="basic"  />
+	
+	<!-- Dictator -->
+	<div class="sheet-Dictator" name="sheet-Dictator">
+		<div class="sheet-basic">
+			<div class="page1-grid">
+				<div class="page1-header1">
+					<h1>The Dictator</h1>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<h2>CLASS DICE: D4</h2>
+					<p>
+						A LITTLE EMOTIONAL NUDGE<br>
+						When you have your D4 and could get an edge from subtle emotional manipulation,<br> roll it as part of your dice pool and increase any other dice’s result by its value.
+					</p>
+				</div>
+				<div class="page1-sidebar">
+					<i>
+						<p>You read a sad story. You cry. Do you think that’s sinister, as if someone has artificially taken over your emotions? Of course not. That’s just what art is.</p>
+						<p>Anyone who’s ever met a Dictator would disagree.</p>
+						<p>By performing, they alter other people’s emotional states. Dictators play people like a musician plays a harp. They can pluck the strings. They can snap them.</p>
+						<p>They’re like bards, if everyone was	fucking petrified of bards.</p>
+					</i>
+					<br>
+					<h3>PLAY A DICTATOR IF YOU WANT TO...</h3>
+					<ul>
+						<li>Be an artist whose performances warp others’ emotions, and even create magical effects.</li>
+						<li>Use your imagination and creativity to work out exactly what your awful gift can do</li>
+						<li>Be hated and feared for very good reasons.</li>
+					</ul>
+				</div>
+				<div class="page1-stats">
+					<hr>
+					<p align="center">
+						<b><i><span>Stats</span></i></b> &nbsp; <br>
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"></button> <span>Str</span>:<input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"></button> <span>Dex</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"></button> <span>Con</span>:<input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"></button> <span>Wis</span>:<input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"></button> <span>Int</span>:<input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha"></button> <span>Cha</span>:<input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<p align="center">
+						<span>Guard</span>:<input type="number" name="attr_Guard" min="0" max="4" style="width: 50px"> &nbsp; 
+						<span>Health</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 50px"> &nbsp;
+						<span>Willpower</span>:<input type="number" name="attr_Con" min="0" max="8" style="width: 50px"> &nbsp;
+						<span>Defence</span>:<input type="number" name="attr_Wis" min="0" max="4" style="width: 50px"> &nbsp;<br>     
+					</p>
+					<hr>
+				</div>
+				<div class="page1-equip sheet-2colrow">
+					<div class="sheet-col">
+						<b><i><span>Equipment</span></i></b><br>
+						<span>Pick One</span>
+						<p>
+							<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Equipment-Dictator1">
+							<span>
+								<b>A dagger and a ranged weapon.</b><br>
+								Bow, pistol or something else.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Equipment-Dictator2">
+							<span>
+								<b>A rapier.</b><br>
+								Use <b>Dex</b> instead of <b>Str</b> for its dice pool. <b>Special:</b> recover one <b>Guard</b>.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Equipment-Dictator3">
+							<span>
+								<b>Magical death touch.</b><br>
+								May use <b>Dex</b> instead of <b>Str</b> for its dice pool. This weapon is concealed and cannot be taken from you.
+							</span>
+						</p>
+				   </div>
+				   <div class="sheet-col">
+						<b><i><span>Look</span></i></b><br>
+						<span>Pick One</span>
+						<span>You are wearing (<b>Defense 0</b>)</span>
+						<p>
+							<input type="checkbox" class="sheet-Look-Dictator" name="attr_Look-Dictator1">
+							<span>
+								Austere, severe angular outfits
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" class="sheet-Look-Dictator" name="attr_Look-Dictator2">
+							<span>
+								Flamboyant, straight out of a stage show
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" class="sheet-Look-Dictator" name="attr_Look-Dictator3">
+							<span>
+								Spectacular eveningwear
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" class="sheet-Look-Dictator" name="attr_Look-Dictator4">
+							<span>
+								Something else: <input type="text" name="attr_dictator-look-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				</div>
+				<div class="page1-other">
+					<hr>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<h3><span>Dictating Emotions</span></h3><br>
+							<b><span>Select Your Emotion Palette</span></b>:<br>
+							<p>
+								Choose a spoke from the wheel to be your focus: these are the emotions you manipulate.
+							</p>
+							<h3>The Tell</h3>
+							<p>
+								The Voice lets you issue commands with magical force. When you control emotions, you merely speak commands aloud, but something gives you away. What is it?
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Tell-Dictator" name="attr_Tell-Dictator1">
+								<span>
+									Strange facial scars appear (visibly obvious)
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Tell-Dictator" name="attr_Tell-Dictator2">
+								<span>
+									Demonic, loud voice (impossible to whisper)
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Tell-Dictator" name="attr_Tell-Dictator3">
+								<span>
+									Strange smells emerge from your mouth (scent lingers)
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Tell-Dictator" name="attr_Tell-Dictator4">
+								<span>
+									Something else: <input type="text" name="attr_dictator-tell-other" style="width: 100%">
+								</span>
+							</p>
+						</div>
+						<div class="sheet-col">
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Ecstacy">
+								<span>
+									Ecstacy/Joy/Serenity
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Admiration">
+								<span>
+									Admiration/Trust/Acceptance
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Terror">
+								<span>
+									Terror/Fear/Apprehension
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Amazement">
+								<span>
+									Amazement/Surprise/Distraction
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Grief">
+								<span>
+									Grief/Sadness/Pensiveness
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Loathing">
+								<span>
+									Loathing/Disgust/Boredom
+								</span>
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Emotion-Dictator" name="attr_Dictator-Rage">
+								<span>
+									Rage/Anger/Annoyance
+								</span> 
+							</p>
+							<p>
+								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Vigilance">
+								<span>
+									Vigilance/Anticipation/Interest
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<h3>The Performance</h3>
+							<p>
+								To use The Voice, pick the emotion(s) and roll a Cha dice pool plus your D4. Lose 1 success for each target past the first. The D4 shows the effect’s Intensity, and each successes lets you add or subtract 1 from it. The final Intensity affects the Audience according to your goal – Control or Attack. Control: Manipulate them with the emotion and steal their agency. +1 Disadvantage per Intensity on actions opposing the compulsion, +1 Advantage on actions that support it. Complete control if Intensity exceeds Willpower. Attack: Make them feel so hard it hurts. They take +1 Disadvantage per Intensity on attacks, and are killed or incapacitated if Intensity exceeds Willpower. Pass your D4 to a player whose character you’re influencing. To affect anyone else with your powers, you must reclaim your D4. This is instant and ends that compulsion.
+							</p>
+						</div>
+						<div class="sheet-col">
+							<h3>INTENSITY OF EFFECT</h3>
+							<table>
+								<tr>
+									<td style="width: 10%">1</td>
+									<td>Enough to influence them.</td>
+								</tr>
+								<tr>
+									<td style="width: 10%">2</td>
+									<td>They feel it intensely.</td>
+								</tr>
+								<tr>
+									<td style="width: 10%">3</td>
+									<td>They feel it as intensely as most people will ever feel it.</td>
+								</tr>
+								<tr>
+									<td style="width: 10%">4</td>
+									<td>More intense than love for a soulmate.</td>
+								</tr>
+								<tr>
+									<td style="width: 10%">5</td>
+									<td>All-consuming obsession.</td>
+								</tr>
+								<tr>
+									<td style="width: 10%">6+</td>
+									<td>Supernaturally intense. Likely lethal.</td>
+								</tr>
+							<table>
+							<br>
+							<p>
+								If <b>Intensity</b> &lt; <b>Willpower</b>, targets may resist with a <b>Wis</b> roll at a Difficulty of 1/2 <b>Intensity</b>.
+							</p>
+							<p>
+								On a <b>Crit Fail</b>, you’ve broken them; the influence is permanent.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-advancement">
+			<div class="page2-grid">
+				<div class="page2-col1">
+					<h1 class="black-header">DICTATOR ADVANCEMENTS</h1>
+					<h2>AN ARTIST'S PROGRESS</h2>
+					<p>Get a new Emotion Wheel spoke and pick one:</p>
+					<p>
+						<input type="checkbox" name="attr_Artist-Progress1">
+						<span>
+							<b>Know Your Audience.</b> Pick a group and an emotion. When you use that emotion to affect the group, set your dice to 4 before rolling. The group should be no more than 25% of the people you could meet; if it’s particularly small, the GM may also grant +1 Advantage when targeting them.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Artist-Progress2">
+						<span>
+							<b>You, Choir.</b> Lose 1 less success when targeting a crowd for every time you take this option.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Artist-Progress3">
+						<span>
+							<b>We, Choir (Pick Once).</b> When using The Voice on willing people, suffer no penalties for group size.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Artist-Progress4">
+						<span>
+							<b>Tell, Don’t Show.</b> Under certain circumstances, your Voice’s Tell no longer manifests. What are those circumstances?
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Artist-Progress5">
+						<span>
+							<b>Signature Piece.</b> Choose a spell from the Master’s Grimoire (p. 370) with no more than 15 risk; whenever you have your D4, you may cast the spell by rolling a <b>Cha</b> pool boosted as per <b>A Little Emotional Nudge</b>.
+						</span>
+					</p>
+					<h2>IT'S NOT WHAT YOU KNOW</h2>
+					<p>
+						<input type="checkbox" name="attr_NotWhatYouKnow1">
+						<span>
+							<b>A Working Artist (Pick Once).</b> Once per adventure, declare who owes you a favour and say what you did to earn it.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_NotWhatYouKnow2">
+						<span>
+							<b>Henchperson (Pick Once)</b> You have a loyal, highly skilled henchperson, designed via the Secondary Characters Rule (p. 280) with one fewer character point. If the henchperson is killed or lost, you can replace them between missions.
+						</span>
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								THEY ARE BOUND TO YOU BY:
+								<br>
+								<input type="checkbox" name="attr_DictatorBound1">
+								<span>
+									A critical fail emotion.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorBound2">
+								<span>
+									A promise.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorBound3">
+								<span>
+									A need that you fulfill.
+								</span>
+							</div>
+							<div class="sheet-col">
+								PICK ONE:
+								<br>
+								<input type="checkbox" name="attr_DictatorCatch1">
+								<span>
+									They resent their condition.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorCatch2">
+								<span>
+									Their friends resent their condition.
+								</span>
+							</div>
+						</div>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_NotWhatYouKnow3">
+						<span>
+							<b>Improve Henchperson.</b> If you have a Henchperson, pick one:
+						</span>
+						<ul>
+							<li>
+								If they have less character points than the group, add one.
+							</li>
+							<li>
+								Choose a new ability or skillset for the Henchperson from the Secondary Character Rules.
+							</li>
+						</ul>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_NotWhatYouKnow4">
+						<span>
+							<b>Agent.</b> You have a specialist or informant ready to help. 1/session, you can get information about a situation from them.
+						</span>
+					</p>
+					<h2>ONE STEP AHEAD</h2>
+					<p>
+						1/session, you may declare that a pre-existing plan is going to come into effect and define it in a flashback scene. Pick a single moving part to detail: an unexpected ally, a prepared escape	route, a hidden piece of important equipment. Then roll your D4. On a 1, the GM adds an extra cost to the plan. On a 4, it works too well and the GM adds a complication.
+					</p>
+					<h2>THE GIG</h2>
+					<p>
+						If you have a captive audience and time to prepare and perform a dramatic ritual, set your D4 to 4 on your performance roll.
+					</p>
+					<h2>FANBASE</h2>
+					<p>
+						Usually, your victims resent your influence once it’s removed. Now, your victims instead feel euphoric and grateful for the experience until they next sleep. After that, they start to long for you to use the voice on them again.
+					</p>
+					<h2>THE GANG</h2>
+					<p>
+						You have a small group of acolytes. None of them will have any stat above 2, but they’re useful and hang on your every word even when you’re not using The Voice.
+					</p>
+					<h2>EMOTIONAL CAPITAL</h2>
+					<p>
+						The Dictator has enough influence in a major settlement that they can leverage almost complete control. Any time you want the city to do something, describe which contact you use to achieve it, and the GM will tell you what you’ll have to owe them. If you agree, the city acts as you choose.
+					</p>
+				</div>
+				<div class="page2-col2">
+					<h2>CARVING OUT THEIR HEART</h2>
+					<p>
+						When you use The Voice, declare this ability before rolling to make the influence permanent, unremovable even by you. This ability does not work on any of the Personas, and will void the protection gained from Live at The Witch Trials if word gets out.
+					</p>
+					<h2>PORTRAIT OF THE ARTIST AS A MONSTER</h2>
+					<p>
+						You can grow the claws to back up the personality. When you take this advance, define the monster lurking inside you (see p. 38). You can redefine your monster any time your self image of your “monster” changes. Pick four traits your monster has:
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								<input type="checkbox" name="attr_DictatorMonster1">
+								<span>
+									It’s invulnerable to one common form of harm.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster2">
+								<span>
+									Its attacks have <i>Special: this hit causes 2 <b>Wounds</b></i>.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster3">
+								<span>
+									It’s invulnerable to emotional control.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster4">
+								<span>
+									It can attack at range.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster5">
+								<span>
+									Its Health is 2x <b>Con</b>.
+								</span>
+							</div>
+							<div class="sheet-col">
+								<input type="checkbox" name="attr_DictatorMonster6">
+								<span>
+									It can use The Voice on anyone who makes eye contact, silently and with a glance.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster7">
+								<span>
+									It can fly.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster8">
+								<span>
+									It can pass through objects.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_DictatorMonster9">
+								<span>
+									It can disguise its monstrous nature.
+								</span>
+							</div>
+						</div>
+						<br>
+						<p>
+							When you transform, re-arrange your stats as you wish, set <b>Defence</b> to 1, and say what awful thing the monster wants to do. You remain in this form until you do that thing, are knocked unconscious, or take a full action and pass a Difficulty 2 <b>Wis</b> roll to talk yourself down. While in this monstrous form you may add D4 to any dice pool, as per <b>A Little Emotional Nudge</b>.
+						</p>
+					</p>
+					<h2>THE POWER BEHIND THE THRONE</h2>
+					<p>
+						You have complete control of a major part of one of the Great Powers. Describe how you’ve compromised it.
+					</p>
+					<h2>THE GREAT DICTATOR</h2>
+					<p>
+						You can target any number of beings with <b>Willpower 4</b> or less with your performance, so long as they can clearly perceive it. If those in power learn you have this ability, lose the protection gained from <b>Live at The Witch Trials</b>.
+					</p>
+					<h2 class="black-header">AT LEVEL 4: LIVE AT THE WITCH TRIALS.</h2>
+					<p>
+						Your name has attracted a bounty and hunters. What have you done which most frightens people? Pick why you’re still alive:
+						<input type="checkbox" name="attr_WitchTrials1">
+						<span>
+							You have a powerful patron. <i>Who is it? Why are they protecting you?</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WitchTrials2">
+						<span>
+							You’ve joined a licensed organisation. <i>What are your duties? What limits does it place on you?</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WitchTrials3">
+						<span>
+							The Hunters have chosen to ignore you. <i>Why?</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WitchTrials4">
+						<span>
+							Something else.
+						</span>
+					</p>
+				</div>
+				<div class="advancement-grid">
+					<img class="advancement-image" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/AdvancementMaps/DieAdvancementMap.png?raw=true"></img>
+					<input type="checkbox" name="attr_advancement1" style="grid-row: 2/span 1;grid-column: 2/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement2" style="grid-row: 1/span 1;grid-column: 3/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement3" style="grid-row: 1/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement4" style="grid-row: 2/span 1;grid-column: 5/span 1;height: 50%;">
+					
+					<input type="checkbox" name="attr_advancement5" style="grid-row: 3/span 1;grid-column: 2/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement6" style="grid-row: 4/span 1;grid-column: 3/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement7" style="grid-row: 3/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement8" style="grid-row: 4/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement9" style="grid-row: 3/span 1;grid-column: 5/span 1;height: 50%;">
+					
+					<input type="checkbox" name="attr_advancement10" style="grid-row: 5/span 1;grid-column: 3/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement11" style="grid-row: 6/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement12" style="grid-row: 5/span 1;grid-column: 4/span 1;height: 50%;">
+					
+					<input type="checkbox" name="attr_advancement13" style="grid-row: 7/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement14" style="grid-row: 8/span 1;grid-column: 4/span 1;height: 50%;">
+					
+					<input type="checkbox" name="attr_advancement15" style="grid-row: 9/span 1;grid-column: 3/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement16" style="grid-row: 10/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement17" style="grid-row: 9/span 1;grid-column: 4/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement18" style="grid-row: 10/span 1;grid-column: 5/span 1;height: 50%;">
+					<input type="checkbox" name="attr_advancement19" style="grid-row: 9/span 1;grid-column: 6/span 1;height: 50%;">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Fool -->
+	<div class="sheet-Fool" name="sheet-Fool">
+		The Fool
+	</div>
+	
+	<!-- Emotion Knight -->   
+	<div class="sheet-Emotion-Knight" name="sheet-Emotion-Knight">
+		The Emotion Knight
+	</div>
+	
+	<!-- Neo -->
+	<div class="sheet-Neo" name="sheet-Neo">
+		The Neo
+	</div>
+	
+	<!-- Godbinder -->
+	<div class="sheet-Godbinder" name="sheet-Godbinder">
+		The Godbinder
+	</div>
+	
+	<!-- Master -->
+	<div class="sheet-Master" name="sheet-Master">
+		The Master
+	</div>
+	<br><br>
+	<font size="0.5">sheet version 0.0.1 for DIE<br>
+	</font>
+</div>
+
+
+<script type="text/worker">
+    const buttonlist = ["basic","advancement","gods"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>
+
+
+<rolltemplate class="sheet-rolltemplate-mh2">
+	<table>
+	<tr>
+		<th colspan="5"><img src="http://i.imgur.com/NYHrh2J.png">{{name}} <img src="http://i.imgur.com/Y4a3NF3.png"> {{#roll_name}} <span  data-i18n="lbl-{{roll_name}}" />{{/roll_name}}{{#roll_mod}}{{/roll_mod}}</th>
+	</tr>
+	<tr>
+		<td colspan="5"><img src="http://i.imgur.com/NYHrh2J.png">{{comment}}</td>
+	</tr>
+	<tr>
+		<td class="result success" rowspan ="3" style="width: 80px">{{result}}</td>
+		<td colspan="4"></td>
+	</tr>
+	<tr>
+			  <td style="width: 30px"></td>
+			{{#rollTotal() result 15}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 15}}
+			{{#rollTotal() result 14}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 14}}
+			{{#rollTotal() result 13}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 13}}
+			{{#rollTotal() result 12}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 12}}
+			{{#rollTotal() result 11}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 11}}
+			{{#rollTotal() result 10}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
+			{{/rollTotal() result 10}}
+			{{#rollTotal() result 9}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
+			{{/rollTotal() result 9}}
+			{{#rollTotal() result 8}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
+			{{/rollTotal() result 8}}
+			{{#rollTotal() result 7}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
+			{{/rollTotal() result 7}}
+			{{#rollTotal() result 6}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 6}}
+			{{#rollTotal() result 5}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 5}}
+			{{#rollTotal() result 4}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 4}}
+			{{#rollTotal() result 3}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 3}}
+			{{#rollTotal() result 2}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 2}}
+			{{#rollTotal() result 1}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 1}}
+			{{#rollTotal() result 0}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result 0}}
+			{{#rollTotal() result -1}}
+			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
+			{{/rollTotal() result -1}}      
+	</tr>
+	<tr>
+			{{#rollTotal() result 6}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 6}}
+			{{#rollTotal() result 5}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 5}}
+			{{#rollTotal() result 4}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 4}}
+			{{#rollTotal() result 3}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 3}}
+			{{#rollTotal() result 2}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 2}}
+			{{#rollTotal() result 1}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 1}}
+			{{#rollTotal() result 0}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result 0}}
+			{{#rollTotal() result -1}}
+			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
+			{{/rollTotal() result -1}}  
+	</tr>
+	</table>
+</rolltemplate>

@@ -1,0 +1,242 @@
+div.sheet-Dictator,
+div.sheet-Fool,
+div.sheet-Emotion-Knight,
+div.sheet-Neo,
+div.sheet-Godbinder,
+div.sheet-Master
+{
+    display: none;
+}
+
+input[type="radio"][value="1"]:checked ~ div.sheet-Dictator,
+input[type="radio"][value="2"]:checked ~ div.sheet-Fool,
+input[type="radio"][value="3"]:checked ~ div.sheet-Emotion-Knight,
+input[type="radio"][value="4"]:checked ~ div.sheet-Neo,
+input[type="radio"][value="5"]:checked ~ div.sheet-Godbinder,
+input[type="radio"][value="6"]:checked ~ div.sheet-Master
+{
+    display: block;
+}
+
+/*Configure the tab buttons*/
+.sheet-basic,
+.sheet-config,
+.sheet-advancement {
+    display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="basic"] ~ div > div.sheet-basic,
+.sheet-tabstoggle[value="gods"] ~ div > div.sheet-config,
+.sheet-tabstoggle[value="advancement"] ~ div > div.sheet-advancement {
+    display: block;
+}
+
+.sheet-move_radio{
+	display:inline-block!important;
+}	
+
+/*grid formatting*/
+.page1-grid
+{
+	display: grid;
+	grid-template: 8% 12% 15% 1fr 1fr/20% 1fr;
+}
+
+.page1-header1
+{
+	grid-column: 1/span 1;
+	grid-row: 1/span 1;
+}
+
+.page1-header2
+{
+	grid-column: 2/span 1;
+	grid-row: 1/span 1;
+}
+
+.page1-stats
+{
+	grid-column: 2/span 1;
+	grid-row: 2/span 1;
+}
+
+.page1-equip
+{
+	grid-column: 2/span 1;
+	grid-row: 3/span 1;
+}
+
+.page1-sidebar
+{
+	grid-column: 1/span 1;
+	grid-row: 3/span 2;
+}
+
+.page1-other
+{
+	grid-column: 2/span 1;
+	grid-row: 4/span 2;
+}
+
+.page2-grid
+{
+	display: grid;
+	grid-template: 30% 1fr/1fr 1fr;
+}
+
+.page2-col1
+{
+	grid-column: 1/span 1;
+	grid-row: 1/span 2;
+}
+
+.page2-col2
+{
+	grid-column: 2/span 1;
+	grid-row: 2/span 1;
+}
+
+.advancement-grid
+{
+	display: grid;
+	grid-template: repeat(12, 1fr)/15% repeat(5, 1fr) 15%;
+	grid-column: 2/span 1;
+	grid-row: 1/span 1;
+	align-items: center;
+}
+
+.advancement-image
+{
+	grid-column: 2/span 5;
+	grid-row: 1/span 12;
+	height: 100%;
+	width: 100%;
+}
+
+select.sheet-SkinSelect 
+{
+    position: relative;
+    top: 4px;
+}
+
+input[type="radio"] 
+{
+    display: none;
+}
+
+option.sheet-SkinSelect:checked   
+{
+    display: none;
+}
+
+/* TEXT FORMATTING */
+
+h1 {
+    font-size: 120%;
+    font-family: "Tahoma";
+    color: black;
+    
+}
+
+.page1-sidebar > i > p
+{
+	text-indent: 10px;
+}
+
+.black-header
+{
+	background: #000000;
+	color: #FFFFFF;
+}
+
+/* HR line */
+
+hr {
+    display: block;
+    height: 4px;
+    border: 0;
+    border-top: 4px solid #000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/* ROLL TEMPLATE */
+
+.sheet-rolltemplate-mh2 table {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 280px;
+    height: 165px;
+    padding: 0px;
+ 	background: url(http://i.imgur.com/7hM6C1Z.gif) top left;
+    background-size: 280px 165px; 
+    background-repeat: no-repeat;
+    font-family: "Baskerville", "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+	border-spacing:0;
+}
+ 
+.sheet-rolltemplate-mh2 th {
+    color: rgb(250, 250, 250);
+	font-size: 1.7em;
+    text-align: left;
+    font-family: "Baskerville";
+    color: white;
+    text-shadow:
+    -1px -1px 0 #dc1921,  
+     1px -1px 0 #dc1921,
+    -1px  1px 0 #dc1921,
+     1px  1px 0 #dc1921;
+	border-style:solid;
+	border-width:0px;
+	vertical-align:bottom;
+	height: 30px;
+}
+
+ 
+.sheet-rolltemplate-mh2 td {
+    vertical-align: top;
+    font-family: "Baskerville";
+	border-style:solid;
+	border-width:0px;
+	height: 30px;
+	font-size: 1em;
+	vertical-align:center;
+    color: #ffffff;
+}
+
+ 
+.sheet-rolltemplate-mh2 .sheet-result {
+    font-size: 5em;
+    text-align: center;
+	padding-top: 40px;
+} 
+ 
+.sheet-rolltemplate-mh2 .inlinerollresult,
+.sheet-rolltemplate-mh2 .inlinerollresult.fullcrit,
+.sheet-rolltemplate-mh2 .inlinerollresult.fullfail,
+.sheet-rolltemplate-mh2 .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #dc1921;
+    border: none;
+}
+
+.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult,
+.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.fullcrit,
+.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.fullfail,
+.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #dc1921;
+    border: none;
+}
+
+.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult,
+.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.fullcrit,
+.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.fullfail,
+.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.importantroll{
+    background-color: transparent;
+    color: #dc1921;
+    border: none;
+}
