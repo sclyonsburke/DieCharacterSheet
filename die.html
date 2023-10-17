@@ -62,12 +62,12 @@
 				</div>
 				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
 				<div class="page1-stats">
-					<hr>
 					<p align="center">
 						<div class="sheet-2colrow black-header">
 							<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
 							<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
 						</div>
+						<br>
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"></button> <span>Str</span>:<input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"></button> <span>Dex</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"></button> <span>Con</span>:<input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
@@ -182,88 +182,66 @@
 							</p>
 						</div>
 						<div class="sheet-col">
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Ecstacy">
-								<span>
-									Ecstacy/Joy/Serenity
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Admiration">
-								<span>
-									Admiration/Trust/Acceptance
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Terror">
-								<span>
-									Terror/Fear/Apprehension
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Amazement">
-								<span>
-									Amazement/Surprise/Distraction
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Grief">
-								<span>
-									Grief/Sadness/Pensiveness
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Loathing">
-								<span>
-									Loathing/Disgust/Boredom
-								</span>
-							</p>
-							<p>
-								<input type="checkbox" class="sheet-Emotion-Dictator" name="attr_Dictator-Rage">
-								<span>
-									Rage/Anger/Annoyance
-								</span> 
-							</p>
+							<div class="emotions">
+								<img class="emotion-wheel" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/EmotionWheel.png?raw=true">
+								<input type="checkbox" name="attr_Ecstacy" style="grid-row: 2/span 1;grid-column: 4/span 1;">
+								<input type="checkbox" name="attr_Admiration" style="grid-row: 3/span 1;grid-column: 5/span 1;">
+								<input type="checkbox" name="attr_Terror" style="grid-row: 4/span 1;grid-column: 6/span 1;">
+								<input type="checkbox" name="attr_Amazement" style="grid-row: 5/span 1;grid-column: 5/span 1;">
+								<input type="checkbox" name="attr_Grief" style="grid-row: 6/span 1;grid-column: 4/span 1;">
+								<input type="checkbox" name="attr_Loathing" style="grid-row: 5/span 1;grid-column: 3/span 1;">
+								<input type="checkbox" name="attr_Rage" style="grid-row: 4/span 1;grid-column: 2/span 1;">
+								<input type="checkbox" name="attr_Vigilance" style="grid-row: 3/span 1;grid-column: 3/span 1;">
+							</div>
+							<!--
 							<p>
 								<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Dictator-Vigilance">
 								<span>
 									Vigilance/Anticipation/Interest
 								</span>
-							</p>
+							</p>-->
 						</div>
 					</div>
 					<div class="sheet-2colrow">
 						<div class="sheet-col">
 							<h3>The Performance</h3>
 							<p>
-								To use The Voice, pick the emotion(s) and roll a Cha dice pool plus your D4. Lose 1 success for each target past the first. The D4 shows the effect’s Intensity, and each successes lets you add or subtract 1 from it. The final Intensity affects the Audience according to your goal – Control or Attack. Control: Manipulate them with the emotion and steal their agency. +1 Disadvantage per Intensity on actions opposing the compulsion, +1 Advantage on actions that support it. Complete control if Intensity exceeds Willpower. Attack: Make them feel so hard it hurts. They take +1 Disadvantage per Intensity on attacks, and are killed or incapacitated if Intensity exceeds Willpower. Pass your D4 to a player whose character you’re influencing. To affect anyone else with your powers, you must reclaim your D4. This is instant and ends that compulsion.
+								To use The Voice, pick the emotion(s) and roll a <b>Cha</b> dice pool plus your D4. Lose 1 success for each target past the first. The D4 shows the effect’s <b>Intensity</b>, and each successes lets you add or subtract 1 from it. The final <b>Intensity</b> affects the <b>Audience</b> according to your goal – Control or Attack.
+							</p>
+							<p>
+								<b>Control:</b> Manipulate them with the emotion and steal their agency. +1 Disadvantage per <b>Intensity</b> on actions opposing the compulsion, +1 Advantage on actions that support it. Complete control if <b>Intensity</b> exceeds <b>Willpower</b>.
+								<br>
+								<b>Attack:</b> Make them feel so hard it hurts. They take +1 Disadvantage per <b>Intensity</b> on attacks, and are killed or incapacitated if <b>Intensity</b> exceeds <b>Willpower</b>.
+							</p>
+							<p>
+								Pass your D4 to a player whose character you’re influencing. To affect anyone else with your powers, you must reclaim your D4. This is instant and ends that compulsion.
 							</p>
 						</div>
 						<div class="sheet-col">
 							<h3>INTENSITY OF EFFECT</h3>
 							<table>
 								<tr>
-									<td style="width: 10%">1</td>
+									<td style="width: 10%"><b>1</b></td>
 									<td>Enough to influence them.</td>
 								</tr>
 								<tr>
-									<td style="width: 10%">2</td>
+									<td style="width: 10%"><b>2</b></td>
 									<td>They feel it intensely.</td>
 								</tr>
 								<tr>
-									<td style="width: 10%">3</td>
+									<td style="width: 10%"><b>3</b></td>
 									<td>They feel it as intensely as most people will ever feel it.</td>
 								</tr>
 								<tr>
-									<td style="width: 10%">4</td>
+									<td style="width: 10%"><b>4</b></td>
 									<td>More intense than love for a soulmate.</td>
 								</tr>
 								<tr>
-									<td style="width: 10%">5</td>
+									<td style="width: 10%"><b>5</b></td>
 									<td>All-consuming obsession.</td>
 								</tr>
 								<tr>
-									<td style="width: 10%">6+</td>
+									<td style="width: 10%"><b>6+</b></td>
 									<td>Supernaturally intense. Likely lethal.</td>
 								</tr>
 							<table>
