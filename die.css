@@ -43,6 +43,12 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 	grid-template: 7% 15% 13% 1fr 1fr/20% 1fr;
 }
 
+.page1-grid-fool
+{
+	display: grid;
+	grid-template: 5% 10% 13% 1fr 1fr/20% 1fr;
+}
+
 .page1-header1
 {
 	grid-column: 1/span 1;
@@ -79,6 +85,12 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 {
 	grid-column: 2/span 1;
 	grid-row: 3/span 1;
+}
+
+.page1-fool
+{
+	grid-column: 2/span 1;
+	grid-row: 3/span 3;
 }
 
 .paragon-picture
