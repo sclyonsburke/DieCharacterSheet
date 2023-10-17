@@ -43,7 +43,7 @@
 						When you have your D4 and could get an edge from subtle emotional manipulation,<br> roll it as part of your dice pool and increase any other dice’s result by its value.
 					</p>
 				</div>
-				<img class "paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Dictator.jpg?raw=true">
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Dictator.jpg?raw=true">
 				<div class="page1-sidebar">
 					<br>
 					<i>
@@ -60,10 +60,14 @@
 						<li>Be hated and feared for very good reasons.</li>
 					</ul>
 				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
 				<div class="page1-stats">
 					<hr>
 					<p align="center">
-						<b><i><span>Stats</span></i></b> &nbsp; <br>
+						<div class="sheet-2colrow black-header">
+							<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+							<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+						</div>
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"></button> <span>Str</span>:<input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"></button> <span>Dex</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
 						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"></button> <span>Con</span>:<input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
@@ -81,8 +85,10 @@
 				</div>
 				<div class="page1-equip sheet-2colrow">
 					<div class="sheet-col">
-						<b><i><span>Equipment</span></i></b><br>
-						<span>Pick One</span>
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
 						<p>
 							<input type="checkbox" class="sheet-Equipment-Dictator" name="attr_Equipment-Dictator1">
 							<span>
@@ -106,8 +112,10 @@
 						</p>
 				   </div>
 				   <div class="sheet-col">
-						<b><i><span>Look</span></i></b><br>
-						<span>Pick One</span>
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
 						<span>You are wearing (<b>Defense 0</b>)</span>
 						<p>
 							<input type="checkbox" class="sheet-Look-Dictator" name="attr_Look-Dictator1">

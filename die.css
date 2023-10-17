@@ -81,6 +81,13 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 	grid-row: 3/span 2;
 }
 
+.core-mechanic
+{
+	grid-column: 1/span 1;
+	grid-row: 5/span 1;
+	width: 100%;
+}
+
 .page1-other
 {
 	grid-column: 2/span 1;
@@ -155,7 +162,13 @@ h1 {
 .black-header
 {
 	background: #000000;
-	color: #FFFFFF;
+	color: #FFFFFF!important;
+}
+
+.grey-right-text
+{
+	color: #808080;
+	text-align: right;
 }
 
 /* HR line */
