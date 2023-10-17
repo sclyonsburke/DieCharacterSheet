@@ -37,11 +37,16 @@
 					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
 				</div>
 				<div class="page1-header2">
-					<h2>CLASS DICE: D4</h2>
-					<p>
-						A LITTLE EMOTIONAL NUDGE<br>
-						When you have your D4 and could get an edge from subtle emotional manipulation,<br> roll it as part of your dice pool and increase any other dice’s result by its value.
-					</p>
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D4</h2>
+						<p>
+							A LITTLE EMOTIONAL NUDGE<br>
+							When you have your D4 and could get an edge from subtle emotional manipulation,<br> roll it as part of your dice pool and increase any other dice’s result by its value.
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D4.png?raw=true" style="height: 100px">
+					</div>
 				</div>
 				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Dictator.jpg?raw=true">
 				<div class="page1-sidebar">
@@ -62,25 +67,26 @@
 				</div>
 				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
 				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
 					<p align="center">
-						<div class="sheet-2colrow black-header">
-							<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
-							<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
-						</div>
-						<br>
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"></button> <span>Str</span>:<input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"></button> <span>Dex</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"></button> <span>Con</span>:<input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"></button> <span>Wis</span>:<input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"></button> <span>Int</span>:<input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha"></button> <span>Cha</span>:<input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
-					<p align="center">
-						<span>Guard</span>:<input type="number" name="attr_Guard" min="0" max="4" style="width: 50px"> &nbsp; 
-						<span>Health</span>:<input type="number" name="attr_Dex" min="0" max="4" style="width: 50px"> &nbsp;
-						<span>Willpower</span>:<input type="number" name="attr_Con" min="0" max="8" style="width: 50px"> &nbsp;
-						<span>Defence</span>:<input type="number" name="attr_Wis" min="0" max="4" style="width: 50px"> &nbsp;<br>     
-					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
 					<hr>
 				</div>
 				<div class="page1-equip sheet-2colrow">
@@ -294,6 +300,7 @@
 						</span>
 					</p>
 					<h2>IT'S NOT WHAT YOU KNOW</h2>
+					<h3 class="grey-text">PICK ONE</h3>
 					<p>
 						<input type="checkbox" name="attr_NotWhatYouKnow1">
 						<span>
