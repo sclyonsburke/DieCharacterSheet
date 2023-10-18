@@ -15,6 +15,7 @@
 		<div align="right">
 			<button type="action" name="act_basic" >Basic</button>
 			<button type="action" name="act_advancement" >Advancement</button>
+			<button type="action" name="act_vent" >Vent/Stance</button>
 			<button type="action" name="act_gods" >Gods</button>
 		</div>
 	</div>
@@ -920,7 +921,768 @@
 	
 	<!-- Emotion Knight -->   
 	<div class="sheet-Emotion-Knight" name="sheet-Emotion-Knight">
-		The Emotion Knight
+		<div class="sheet-basic">
+			<div class="page1-grid-knight">
+				<div class="page1-header1">
+					<b><span style="font-size:18px">THE <input type="text" name="attr_EmotionName" style="width: 30%"/> KNIGHT</span></b>
+					<br>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D8</h2>
+						<p>
+							EMOTIONALLY ENGAGED<br>
+							When you’re feeling your sacred emotion (at 1 or above on your scale),<br>
+							you may add your D8 to any attack made with your Arcane Weapon
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D8.png?raw=true" style="height: 80px">
+					</div>
+				</div>
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/EmotionKnight.jpg?raw=true">
+				<div class="page1-sidebar">
+					<br>
+					<i>
+						<p>These orders of Knights are the world’s greatest warriors, each devoted to one of the eight sacred emotions. Whether it be joy, hate, or fear: if they feel it, they can use it to fuel the power of their sentient, arcane weapons.</p>
+						<p>When consumed by their sacred sensation, they’re incomparable warriors, capable of miraculous feats. Nothing can stand against their blades–armies, mountains, not even ideas. They can defeat anything.</p>
+						<p>Except the passion which drives them.</p>
+					</i>
+					<br>
+					<h3>PLAY AN EMOTION KNIGHT IF YOU WANT TO...</h3>
+					<ul>
+						<li>Be the most powerful fighter in the land, capable of fighting armies single-handedly.</li>
+						<li>Develop a bond with a signature weapon born of your psyche.</li>
+						<li>Process your tumultuous emotions by using them as incendiary fuel for your powers.</li>
+					</ul>
+				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
+				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
+					<p align="center">
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><b><u>Str</u></b>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex">Dex:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><b><u>Con</u></b>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
+					<hr>
+				</div>
+				<div class="page1-knight">
+					<div style="grid-column: 1/span 1;grid-row: 1/span 1;">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<p>
+							You get your Arcane Weapon, and pick one to explain your striking resilience to harm:
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Knight1">
+							<span>
+								You’ve got an uncanny danger sense.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Knight2">
+							<span>
+								Your scarred flesh is incredibly resistant to pain.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Knight3">
+							<span>
+								You have the finest armour, and keep it in good condition.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Knight4">
+							<span>
+								Something else: <input type="text" name="attr_knight-equip-other" style="width: 1fr">
+							</span>
+						</p>
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<span>You are wearing (<b>Defense 1</b>)</span>
+						<p>
+							<input type="checkbox" name="attr_Look-Fool1">
+							<span>
+								Worn leather, a long cloak and a scowl.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Fool2">
+							<span>
+								Gladiator gear, all skin, spikes and black leather.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Fool3">
+							<span>
+								Covered head to foot, with a full helm showing only your eyes.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Fool4">
+							<span>
+								Something else: <input type="text" name="attr_fool-look-other" style="width: 1fr">
+							</span>
+						</p>
+						<hr>
+						<h3>YOUR SACRED EMOTION</h3>
+						<p>
+							As an Emotion Knight, your powers are driven by you feeling a specific, Sacred Emotion. Choose a word from the list below that best fits that emotion and write it into the blank space at the top of this sheet.
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Rage">
+							<span>
+								<b>Rage,</b> Anger, Annoyance
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Ecstasy">
+							<span>
+								<b>Ecstasy,</b> Joy, Serenity
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Vigilance">
+							<span>
+								<b>Vigilance,</b> Anticipation, Interest
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Loathing">
+							<span>
+								<b>Loathing,</b> Disgust, Boredom
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Grief">
+							<span>
+								<b>Grief,</b> Sadness, Pensiveness
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Amazement">
+							<span>
+								<b>Amazement,</b> Surprise, Distraction
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Terror">
+							<span>
+								<b>Terror,</b> Fear, Apprehension
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Terror">
+							<span>
+								<b>Admiration,</b> Trust, Acceptance
+							</span>
+						</p>
+						<p>
+							All three of the words on the same line are aspects of your Sacred Emotion. You feed off them all.
+						</p>
+					</div>
+					<div style="grid-column: 2/span 1;grid-row: 1/span 1;">
+						<h3><span>THE ARCANE WEAPON</span></h3>
+						<p>
+							All the Emotion Knight’s special abilities are channeled via their arcane weapon. All arcane weapons, whatever their form, are sentient and can communicate with their owner (audibly or with short-range telepathy). They can sense strong sources of its emotion in their vicinity. Pick one from each to customise yours:
+						</p>
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								<b>YOUR WEAPON IS:</b>
+								<p>
+									<input type="checkbox" name="attr_Weapon1">
+									<span>
+										<b>Sharp.</b> Sword, machete, rapier
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Weapon2">
+									<span>
+										<b>Heavy.</b> Greataxe, hammer, gauntlet
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Weapon3">
+									<span>
+										<b>Esoteric.</b> Chain, trident, whip
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Weapon4">
+									<span>
+										Something else.
+									</span>
+								</p>
+							</div>
+							<div class="sheet-col">
+								<b>ITS PERSONALITY IS:</b>
+								<p>
+									<input type="checkbox" name="attr_Personality1">
+									<span>
+										Aggressively determined to pursue its Sacred Emotion
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Personality2">
+									<span>
+										A critical voice, doubting the Knight’s worthiness
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Personality3">
+									<span>
+										The adorable opposite of what you’d expect from it.
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Personality4">
+									<span>
+										Something else.
+									</span>
+								</p>
+							</div>
+						</div>
+						<b>ITS MAIN TRAIT IS:</b>
+						<p>
+							<input type="checkbox" name="attr_WeaponTrait1">
+							<span>
+								<b>Brutal.</b> <i><b>Special:</b> If this hit <b>Wounds,</b> it deals two instead</i>
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_WeaponTrait2">
+							<span>
+								<b>Fast.</b> <i><b>Special:</b> If this hit removes a <b>Guard</b> from your foe, remove two instead of one.</i>
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_WeaponTrait3">
+							<span>
+								<b>Elegant.</b> Uses Dex instead of Str for its pool. <i><b>Special:</b> Recover two <b>Guard</b></i>
+							</span>
+						</p>
+						<hr>
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								<h3>YOUR EMOTIONAL SCALE</h3>
+								<p>
+									Emotion Knights keep track of their Sacred Emotion on the emotional scale, using your D12 as a counter. Depending how intensely your character is feeling this emotion in the fiction, move the counter up or down the scale. Discuss with your GM if you feel it would have changed. Your GM will also prompt you. If the emotional intensity ever meets or exceeds your <b>Willpower</b>, you are overwhelmed by it.
+								</p>
+								<p>
+									<b>Creative Violence:</b> At 2+ on the scale, you can expend all of it to defeat your foe, so long as they fit one of the nouns at your current intensity or below. To begin with, you can’t access any effects stronger than level 3.
+								</p>
+								<p>
+									Roll your D8. If it beats your current emotional intensity, you succeed. If not, you do it but you or someone else close to you suffers Wounds equal to the result and the GM adds complications to your success. Either way, reset your intensity to level 0.
+								</p>
+							</div>
+							<div class="sheet-col">
+								<table>
+									<tr class="black-header"><td>0</td></tr>
+									<tr><td><br></td></tr>
+									<tr class="black-header"><td>1: Strong</td></tr>
+									<tr>
+										<td>
+											<b>Emotionally Engaged:</b> Can use Venting abilities and Stances.
+										</td>
+									</tr>
+									<tr class="black-header"><td>2: Intense</td></tr>
+									<tr>
+										<td>
+											Can use <b>Creative Violence</b> to defeat: a mob, a blockage, a village, a strength.
+										</td>
+									</tr>
+									<tr class="black-header"><td>3: Overwhelming</td></tr>
+									<tr>
+										<td>
+											Can defeat: an army, a town, a mountain range, a weakness.
+										</td>
+									</tr>
+									<tr class="black-header"><td>4: Lost</td></tr>
+									<tr>
+										<td>
+											Can defeat: despair, a city, your true love.
+										</td>
+									</tr>
+									<tr class="black-header"><td>5: Consumed</td></tr>
+									<tr>
+										<td>
+											Can defeat: a country, a religion.
+										</td>
+									</tr>
+									<tr class="black-header"><td>6: Inhuman</td></tr>
+									<tr>
+										<td>
+											Can defeat: a god, hope, yourself.
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-advancement">
+			<div class="page2-grid">
+				<div class="page2-col1">
+					<h1 class="black-header">EMOTION KNIGHT ADVANCEMENTS</h1>
+					<h2>Emotion Draining</h2>
+					<p>
+						You learn to channel your Arcane Weapon’s hunger to siphon their Sacred Emotion from a target character. The GM ascertains how strong an emotion the target was feeling. If it’s 0, this ability has no effect; otherwise, this is the maximum level of emotion that can be siphoned. If the target is willing, the Emotion Knight gains that level of emotion and the target loses it. The character can resist with <b>Cha</b> roll (difficulty 0):
+						<ul>
+							<li>
+								<b>For each success</b>, a level of emotion is transferred from them to the Emotion Knight. Their behaviour changes proportionally.
+							</li>
+							<li>
+								<b>On a failure</b>, the target’s emotion stays the same and the Emotion Knight gains no levels of emotion.
+							</li>
+							<li>
+								<b>On a critical failure</b>, the target can never feel emotion towards that source ever again. However, the Knight gets all the emotion the target presently feels.
+							</li>
+						</ul>
+					</p>
+					<h2>New Stance: TYPE</h2>
+					<p>Pick a new stance of the indicated type.</p>
+					<h2>New Venting Ability</h2>
+					<p>
+						Pick a new venting ability.
+					</p>
+					<h2>Knightmare</h2>
+					<p>
+						After a bad night’s sleep with a dream born of your Sacred Emotion, you will wake to find a magical steed beside you. Every time you have a bad (k)night’s sleep, say what you dreamed about. Some dreams have been known to be prophetic.
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								<b>WHAT DOES IT LOOK LIKE?</b>
+								<p>
+									<input type="checkbox" name="attr_MareLook1">
+									<span>
+										A towering warhorse with burning eyes
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareLook2">
+									<span>
+										A three-humped camel with a knowing expression
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareLook3">
+									<span>
+										A cowardly cat who really doesn’t want to be here
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareLook4">
+									<span>
+										Something else
+									</span>
+								</p>
+							</div>
+							<div class="sheet-col">
+								<b>WHAT GIFT DOES IT HAVE?</b>
+								ACTIVATES WHEN YOU ARE EMOTIONALLY ENGAGED
+								<p>
+									<input type="checkbox" name="attr_MareGift1">
+									<span>
+										It can fly
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareGift2">
+									<span>
+										It is faster than any horse.
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareGift3">
+									<span>
+										It can move through walls like a ghost.
+									</span>
+								</p>
+								<p>
+									<input type="checkbox" name="attr_MareGift4">
+									<span>
+										Something else
+									</span>
+								</p>
+							</div>
+						</div>
+					</p>
+					<h2>Advance Creative Violence</h2>
+					<p>
+						For each time you take this ability, your maximum level of <b>Creative Violence</b> is increased by 1, and your <b>Willpower</b> is treated as 1 higher for the puposes of resisting being overwhelmed by your Sacred Emotion.
+					</p>
+					<h2>Second Active Stance</h2>
+					<p>
+						Stances are common among many martial arts, and a warrior chooses which stance to position themself carefully. One stance at any time. That’s how it works. However, Emotion Knights are the greatest warriors in the land. When this advance is chosen, the Emotion Knight may have two stances active simultaneously. Each stance can be changed independently exactly like normal.
+					</p>
+					<h2>Emotion Vampire</h2>
+					<p>
+						The Arcane Weapon’s hunger can get out of control, and some Emotion Knights choose to chase that. When you use Emotion Draining on a being who has either submitted or is incapable of resisting, an Emotion Knight can choose to feed on the target’s potential to feel that emotion. Gain a single level of the emotion while removing the victim’s ability to ever feel this emotion again. If the victim is currently feeling this emotion, gain an additional level of the emotion alongside those you would normally drain.
+					</p>
+					<p>
+						This is primarily an ability for antagonists and villains. Characters who see this power in use will fear and hate its user in the same way they would a Dictator.
+					</p>
+				</div>
+				<div class="page2-col2">
+					<h2>Single-Minded</h2>
+					<p>
+						When your emotion has you, you’re very difficult to divert. Increase the difficulty to mentally dominate you by your present emotional level. This includes a Dictator’s abilities.
+					</p>
+					<h2>Master of the Order</h2>
+					<p>
+						You are accepted as the worldwide Master of your Order of Knights. If you’re using the Great Game rules, they count as at least one faction, and perhaps more. If you gain <b>Dual Wield</b>, you immediately forfeit this advance.
+					</p>
+					<h2>Dual Wield</h2>
+					<p>
+						Choose a second emotion and gain a second weapon with its own personality. You now track this emotional scale separately. If you have an Emotional Stance from this new emotion, you can only activate that stance if its emotion is above zero. If you have two Emotion Satnces, you may change one to an emotion stance from your new emotion. You can never select the advance <b>Master Of The Order</b>.
+					</p>
+					<h2 class="black-header">AT LEVEL 8: A KNIGHT’S CONFIRMATION</h2>
+					<p>
+						You are called to confirm your choice and enter your order. Your weapon is taken from you. You are taken to a ceremonial place—a dungeon, a labyrinth, a cave system—and you find their way through it. In the centre, your weapon… and one for each of the other seven emotions. Gain the following:
+					</p>
+					<p>
+						<ul>
+							<li>Retrieve your weapon… or pick one of the other seven.</li>
+							<li>Pick a new <b>stance</b> or <b>venting ability</b>. Swap any abilities related to a given emotion.</li>
+							<li>You’re now a member of this league of knights.</li>
+						</ul>
+					</p>
+					<p>
+						If there is an order in the fiction already, use it. If there isn’t, create one in collaboration with the GM. This order may call upon you to perform tasks. You may be able to ask them for help. This is a reciprocal relationship.
+					</p>
+				</div>
+				<div class="advancement-grid">
+					<img class="advancement-image" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/AdvancementMaps/EmotionKnightAdvancementMap.png?raw=true">
+					<input type="checkbox" name="attr_advancement1" style="grid-row: 2/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement2" style="grid-row: 1/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement3" style="grid-row: 1/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement4" style="grid-row: 2/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement5" style="grid-row: 3/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement6" style="grid-row: 4/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement7" style="grid-row: 3/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement8" style="grid-row: 4/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement9" style="grid-row: 3/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement10" style="grid-row: 5/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement11" style="grid-row: 6/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement12" style="grid-row: 5/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement13" style="grid-row: 7/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement14" style="grid-row: 8/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement15" style="grid-row: 9/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement16" style="grid-row: 10/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement17" style="grid-row: 9/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement18" style="grid-row: 10/span 1;grid-column: 9/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement19" style="grid-row: 9/span 1;grid-column: 10/span 1;height: 35%;">
+				</div>
+			</div>
+		</div>
+		<div class="sheet-vent">
+			<div class="sheet-2colrow black-header">
+				<div class="sheet-col">
+					<h1 class="black-header">VENTING ABILITIES</h1>
+				</div>
+				<div class="sheet-col" style="text-align: right">
+					PICK ONE
+				</div>
+			</div>
+			If you are <b>emotionally engaged</b>, you can <b>vent</b>. This reduces your emotional scale by one and triggers the vent ability.
+			<div class="sheet-3colrow">
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_Vent1">
+						<span>
+							<b>Decapitation Strike:</b> Target and attack a single individual and ignore <b>Guard.</b>
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Vent2">
+						<span>
+							<b>Combat Frenzy:</b> Apply the results of this attack to all enemies within melee range of the Knight’s position.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Vent3">
+						<span>
+							<b>Duel:</b> Target a single individual. They cannot attack anyone else until you say so, or until you’re no longer a combatant.
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_Vent4">
+						<span>
+							<b>Personal Attacks:</b> Discover how your Sacred Emotion could be used to hurt the target - whatever that means.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Vent5">
+						<span>
+							<b>Personal Knowledge:</b> Gain knowledge of who or what a target feels your emotion most strongly towards. For example, a Terror Knight could vent to discover a target’s worst fear.
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_Vent6">
+						<span>
+							<b>Distance Strike:</b> You can attack anything, at any distance, as long as you know exactly where they are.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Vent7">
+						<span>
+							<b>Emotional Reserve:</b> When hit, you may reduce your emotion level instead of losing <b>Health</b> on a 1-for-1 basis.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_Vent8">
+						<span>
+							<b>Hardcase:</b> Vent to make anyone human-sized think that if you fought, you would win.
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="sheet-2colrow black-header">
+				<div class="sheet-col">
+					<h1 class="black-header">STANCES</h1>
+				</div>
+				<div class="sheet-col" style="text-align: right">
+					PICK ONE
+				</div>
+			</div>
+			Stances are passive abilities. If you have more than one, you can change them with an action in combat, or at-will outside of combat.
+			<div class="sheet-3colrow">
+				<div class="sheet-col">
+					<h2>COMBAT STANCES</h2>
+					<p>
+						<input type="checkbox" name="attr_CombatStance1">
+						<span>
+							<b>Bodyguard:</b> Choose someone within arm’s reach. If they are attacked, you can choose to be attacked instead.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance2">
+						<span>
+							<b>Ranged Attack:</b> You can attack with your Arcane Weapon out to medium range.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance3">
+						<span>
+							<b>Riposte:</b> When an opponent’s attack fails to hit you, make an immediate attack in response as an extra action.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance4">
+						<span>
+							<b>Parry:</b> All attacks on you suffer one disadvantage.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance5">
+						<span>
+							<b>Quick on the Draw:</b> If someone is in melee range with you, give up your move action to attack them before they attack you.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance6">
+						<span>
+							<b>I’ll Die When I’m Dead:</b> You can act normally when you’ve taken enough damage you should be unconscious. You continue to fight until you die.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance7">
+						<span>
+							<b>Slashing Blade:</b> You can split successes in an attack between multiple targets without suffering a Disadvantage.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance8">
+						<span>
+							<b>Pacifier:</b> You can attack and inflict non-fatal injuries without suffering a disadvantage.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_CombatStance9">
+						<span>
+							<b>Show-Off:</b> Your fighting style is undeniably more beautiful than anyone else’s. Your attacks have:
+							<i><b>Special:</b> Choose an opponent to be startled by your grace. The next attack on them gains an advantage.</i>
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<h2>SOCIAL STANCES</h2>
+					<p>
+						<input type="checkbox" name="attr_SocialStance1">
+						<span>
+							<b>Intimidating Gaze:</b> You can be a scary fucker. If there’s a question of “who’s the most murderous person in the room?” The answer is “You.”
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_SocialStance2">
+						<span>
+							<b>Common Touch:</b> The “Common Folk” of the kingdom automatically think you’re one of them. What does “Common Folk” mean? You tell us.
+						</span>
+					</p>
+					<h2>EMOTION STANCES</h2>
+					<b>ECSTASY/JOY/SERENITY</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance1">
+						<span>
+							<b>Painfree:</b> You no longer suffer any physical pain.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance2">
+						<span>
+							<b>Life and Soul of the Party:</b> Your infectious enthusiasm makes others want to spend time with you.
+						</span>
+					</p>
+					<br>
+					<b>ADMIRATION/TRUST/ACCEPTANCE</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance3">
+						<span>
+							<b>Hero-Worship:</b> Choose one person to idealise. When supporting them in an action, you give two Advantages instead of one.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance4">
+						<span>
+							<b>Trusting Face:</b> You radiate such simple good-heartedness that people will give you the benefit of the doubt unless there’s a strong reason to do otherwise.
+						</span>
+					</p>
+					<br>
+					<b>TERROR/FEAR/APPREHENSION</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance5">
+						<span>
+							<b>Flight:</b> When fleeing, you always escape any pursuer who doesn’t have a supernatural ability to hunt you down.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance6">
+						<span>
+							<b>Reading the Danger Room:</b> When in this stance, at any time, you can ask the GM “What should I be most frightened of here?” and they must answer honestly.
+						</span>
+					</p>
+					<br>
+					<b>AMAZEMENT/SURPRISE/DISTRACTION</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance7">
+						<span>
+							<b>Eeek!</b> When surprised, you jump out of your skin. You instantly teleport a short distance.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance8">
+						<span>
+							<b>Innocent:</b> People cannot read you in any way other than a wide-eyed adorable innocent.
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_SocialStance3">
+						<span>
+							<b>The Look Of Eagles:</b> If someone is looking for a leader, they look to you. Everyone will assume you’re in charge due to your natural authority.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_SocialStance4">
+						<span>
+							<b>Who The Hell Are They?</b> In any room, you instantly attract everyone’s attention.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_SocialStance5">
+						<span>
+							<b>Infectious Charm:</b> All of your jokes land with at least one person present.
+						</span>
+					</p>
+					<br>
+					<b>GRIEF/SADNESS/PENSIVENESS</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance9">
+						<span>
+							<b>Catharsis:</b> When <b>Emotion Draining</b>, you also heal a <b>Wound</b> from your target for each level of emotion drained.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance10">
+						<span>
+							<b>Pity Me:</b> People pity you as they would a whimpering puppy.
+						</span>
+					</p>
+					<br>
+					<b>LOATHING/DISGUST/BOREDOM</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance11">
+						<span>
+							<b>I Know You Hate Me:</b> Declare that anyone who can see you hates you; they behave appropriately.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance12">
+						<span>
+							<b>My Mind Is A Fortress:</b> You are so wrapped up in hatred (of self and others) the difficulty of any emotional manipulation is increased by 2.
+						</span>
+					</p>
+					<br>
+					<b>RAGE/ANGER/ANNOYANCE</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance13">
+						<span>
+							<b>Warface:</b> Anyone foolish enough to meet your gaze regrets it. All your attacks gain <i><b>Special:</b> they metaphorically shit themselves and lose a <b>Guard</b>.</i>
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance14">
+						<span>
+							<b>Berserk:</b> As long as you are in this stance, your health is increased by your <b>Wis</b>.
+						</span>
+					</p>
+					<br>
+					<b>VIGILANCE/ANTICIPATION/INTEREST</b>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance15">
+						<span>
+							<b>You Watch The Watchmen:</b> You know at any time you’ve been spotted or are about to be ambushed.
+						</span>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_EmotionStance16">
+						<span>
+							<b>Guardian:</b> You can declare one person under your protection. You know whenever they are threatened, and gain an advantage when acting on it.
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Neo -->
@@ -944,7 +1706,7 @@
 
 
 <script type="text/worker">
-    const buttonlist = ["basic","advancement","gods"];
+    const buttonlist = ["basic","advancement", "vent", "gods"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({

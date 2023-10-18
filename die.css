@@ -20,15 +20,17 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 
 /*Configure the tab buttons*/
 .sheet-basic,
-.sheet-config,
-.sheet-advancement {
+.sheet-advancement,
+.sheet-vent,
+.sheet-gods {
     display: none;
 }
 
 /* show the selected tab */
 .sheet-tabstoggle[value="basic"] ~ div > div.sheet-basic,
-.sheet-tabstoggle[value="gods"] ~ div > div.sheet-config,
-.sheet-tabstoggle[value="advancement"] ~ div > div.sheet-advancement {
+.sheet-tabstoggle[value="advancement"] ~ div > div.sheet-advancement,
+.sheet-tabstoggle[value="vent"] ~ div > div.sheet-vent,
+.sheet-tabstoggle[value="gods"] ~ div > div.sheet-gods {
     display: block;
 }
 
@@ -47,6 +49,12 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 {
 	display: grid;
 	grid-template: 5% 10% 13% 1fr 1fr/20% 1fr;
+}
+
+.page1-grid-knight
+{
+	display: grid;
+	grid-template: 5% 12% 13% 1fr 1fr/20% 1fr;
 }
 
 .page1-header1
@@ -91,6 +99,14 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 {
 	grid-column: 2/span 1;
 	grid-row: 3/span 3;
+}
+
+.page1-knight
+{
+	grid-column: 2/span 1;
+	grid-row: 3/span 3;
+	display: grid;
+	grid-template: 1fr/43% 57%;
 }
 
 .paragon-picture
