@@ -18,6 +18,20 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
     display: block;
 }
 
+.vent-button,
+.gifts-button,
+.gods-button
+{
+	display: none;
+}
+
+input[type="radio"][value="3"]:checked ~ div button.vent-button,
+input[type="radio"][value="4"]:checked ~ div button.gifts-button,
+input[type="radio"][value="5"]:checked ~ div button.gods-button
+{
+	display: inline-block;
+}
+
 /*Configure the tab buttons*/
 .sheet-basic,
 .sheet-advancement,

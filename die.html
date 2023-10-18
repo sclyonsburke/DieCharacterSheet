@@ -1,4 +1,11 @@
 <div class="sheet-Wrapper">
+	<input type="radio" name="attr_ParagonName" value="1" checked="checked">
+	<input type="radio" name="attr_ParagonName" value="2">
+	<input type="radio" name="attr_ParagonName" value="3">
+	<input type="radio" name="attr_ParagonName" value="4">
+	<input type="radio" name="attr_ParagonName" value="5">
+	<input type="radio" name="attr_ParagonName" value="6">
+	
 	<div class="tab-selection" style="padding-bottom: 10px">
 		<p align="center">
 			<b><i><span>Paragon</span>:</i></b>         
@@ -13,19 +20,14 @@
 		</p>
 		
 		<div align="right">
-			<button type="action" name="act_basic" >Basic</button>
-			<button type="action" name="act_advancement" >Advancement</button>
-			<button type="action" name="act_vent" >Vent/Stance</button>
-			<button type="action" name="act_gods" >Gods</button>
+			<button type="action" name="act_basic">Basic</button>
+			<button type="action" name="act_advancement">Advancement</button>
+			<button type="action" name="act_vent" class="vent-button">Vent/Stance</button>
+			<button type="action" name="act_gifts" class="gifts-button">Gifts</button>
+			<button type="action" name="act_gods" class="gods-button">Gods</button>
 		</div>
 	</div>
 
-	<input type="radio" name="attr_ParagonName" value="1" checked="checked">
-	<input type="radio" name="attr_ParagonName" value="2">
-	<input type="radio" name="attr_ParagonName" value="3">
-	<input type="radio" name="attr_ParagonName" value="4">
-	<input type="radio" name="attr_ParagonName" value="5">
-	<input type="radio" name="attr_ParagonName" value="6">
 	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="basic"  />
 	
 	<!-- Dictator -->
@@ -776,7 +778,7 @@
 			<div class="page2-grid">
 				<div class="page2-col1">
 					<h1 class="black-header">FOOL ADVANCEMENTS</h1>
-					<h2>A TRIP TO CLOWN SCHOOL</h2>
+					<h2>CLOWN SCHOOL</h2>
 					<p>Along the way, a Fool picks up a few specialised tricks in how to use (and abuse) their luck.</p>
 					<p>
 						<input type="checkbox" name="attr_Clown-School1">
@@ -1706,7 +1708,7 @@
 
 
 <script type="text/worker">
-    const buttonlist = ["basic","advancement", "vent", "gods"];
+    const buttonlist = ["basic","advancement", "vent", "gifts", "gods"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({
@@ -1714,6 +1716,12 @@
             });
         });
     });
+	
+	on("change:ParagonName", function() {
+		setAttrs({
+                sheetTab: "basic"
+		});
+	});
 </script>
 
 
