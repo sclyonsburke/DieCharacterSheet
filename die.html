@@ -473,7 +473,7 @@
 						<br>
 						<input type="checkbox" name="attr_WitchTrials4">
 						<span>
-							Something else.
+							Something else: <input type="text" name="attr_WitchTrialsOther" style="width: 1fr%">
 						</span>
 					</p>
 				</div>
@@ -1296,7 +1296,7 @@
 								<p>
 									<input type="checkbox" name="attr_MareLook4">
 									<span>
-										Something else
+										Something else<br><input type="text" name="attr_MareLookOther" style="width: 100%">
 									</span>
 								</p>
 							</div>
@@ -1324,7 +1324,7 @@
 								<p>
 									<input type="checkbox" name="attr_MareGift4">
 									<span>
-										Something else
+										Something else<br><input type="text" name="attr_MareGiftOther" style="width: 100%">
 									</span>
 								</p>
 							</div>
@@ -1689,7 +1689,901 @@
 	
 	<!-- Neo -->
 	<div class="sheet-Neo" name="sheet-Neo">
-		The Neo
+		<div class="sheet-basic">
+			<div class="page1-grid-neo">
+				<div class="page1-header1">
+					<h1>THE NEO</h1>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D10</h2>
+						<p>
+							Gifts of the Fair<br>
+							You can add your D10 to your dice pool any time you’re assisted by an activated Gift.
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D10.png?raw=true" style="height: 100px">
+					</div>
+				</div>
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Neo.jpg?raw=true">
+				<div class="page1-sidebar">
+					<br>
+					<i>
+						<p>Adventurers love gold. With their propensity for taking anything that isn’t nailed down makes them all thieves… which makes the classical fantasy prejudice against rogues a little odd. They’re all at it. Why do rogues get the glances?</p>
+						<p>But anyone who’s ever met one knows why people are suspicious about the Neo.</p>
+						<p>There’s a special kind of gold, and the Neo’s magical technology needs to be activated by this every day. If they can’t find enough then all their gifts mean nothing. They can’t skip between shadows, dance through the sky or punch a hole through a Fallen’s head from half a mile away.</p>
+						<p>Adventurers all want gold, but no-one <b>needs</b> it like a Neo.</p>
+					</i>
+					<br>
+					<h3>PLAY A NEO IF YOU WANT TO...</h3>
+					<ul>
+						<li>Be the chromed-up cyberpunk rogue in the fantasy adventuring party.</li>
+						<li>Select from an armoury of magic-cybernetic gifts you can personalise to your heart’s content.</li>
+						<li>Hunt desperately for the next score to fuel your powers.</li>
+					</ul>
+				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
+				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
+					<p align="center">
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><b><u>Dex</u></b>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><b><u>Int</u></b>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
+					<hr>
+				</div>
+				<div class="page1-equip sheet-2colrow">
+					<div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>YOU START WITH:</span></div>
+						</div>
+						<ul>
+							<li>
+								<b>A dagger</b> (or any pointy thing which stabs)
+							</li>
+							<li>
+								<b>Another close weapon</b> (short sword, a second dagger, or something else)
+							</li>
+							<li>
+								<b>A ranged weapon</b> (pistol, a rifle, or something else)
+							</li>
+						</ul>
+				   </div>
+				   <div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<span>You are wearing (<b>Defense 0</b>)</span>
+						<p>
+							<input type="checkbox" name="attr_Look-Neo1">
+							<span>
+								Black leather, studs and chrome, white leather, bleach and catsuits
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Neo2">
+							<span>
+								Billowing black cloak and sinister scarlet eyes
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Neo3">
+							<span>
+								Exposed metallic exoskeleton and vat-grown muscle
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Neo4">
+							<span>
+								Something else: <input type="text" name="attr_dictator-look-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				</div>
+				<div class="page1-other">
+					<hr>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<div class="sheet-2colrow">
+								<div class="sheet-col">
+									<h3><span>FAIR GOLD</span></h3>
+								</div>
+								<div class="sheet-col">
+									<input type="number" name="attr_FairGold" min="0" max="50" style="width: 45px;float: right">
+								</div>
+							</div>
+							<span class="grey-text" style="font-size:8px">Keep track of how many Fair Gold you possess. They’ll disappear at dawn.</span><br>
+							<p>
+								Fair Gold is the techno-magical fuel which powers your gifts. It takes the form of small coins, most commonly found in the corpses of Fallen, but you will find other sources. Your AI will tell you if any Fair Gold is nearby.
+							</p>
+							<p>
+								A single piece of Fair Gold will activate one of your gifts (and its upgrades) until the following Dawn, including any of its upgrades. Each Neo has a slot on their body where they can insert the coin – normally the neck, but you may vary.
+							</p>
+							<h3>NEOTECH</h3>
+							<p>
+								You always have an AI system and basic ability to access the Fair Field—an invisible technological data network. Your AI system is capable of talking with you and performing basic tasks relating to your gifts and upgrades.
+							</p>
+							<p>
+								To use your Neotech to hack Fallen, computers, automated systems and anything technological, roll a dice pool based on your <b>Int</b>. Each success lets you bypass a particular problem your target is causing. The dice pool has <i><b>Special:</b> actively subvert the system to perform one action.</i>
+							</p>
+						</div>
+						<div class="sheet-col">
+							<h3>GIFTS OF THE FAIR</h3>
+							<p>
+								The Neo has access to otherworldly cyberpunk technology—robotic limbs, loyal automatons, smart weapons, and more— known as gifts. When creating your Neo, select one techno-magical gift from the Gifts sheet, and one of its upgrades.
+							</p>
+							<p>
+								Gifts all have narrative effects in addition to mechanical ones; they allow you to perform suitable associated tasks. A jetpack lets you fly. A teleporter lets you teleport.
+							</p>
+							<p>
+								You can only take a single upgrade marked <b>Defensive</b> unless an advancement says otherwise. If not stated otherwise, Upgrades can be picked multiple times.
+							</p>
+							<h3>OVERCHARGE</h3>
+							<p>
+								You can use extra Fair Gold to simulate an upgrade in a one-off fashion. To overcharge an activated gift, describe your desired effect. The GM sets a cost (in gold) to achieve this effect.
+							</p>
+							<p class="grey-background">
+								<b>One gold</b> is enough to temporarily remove a Gift’s limitations, extend its capacities or ape an Upgrade.
+							</p>
+							<p class="grey-background">
+								<b>Two gold</b> is enough to improve the gift in several ways.
+							</p>
+							<p class="grey-background">
+								<b>Three or more gold</b> let you perform truly spectacular feats.
+							</p>
+							<p>
+								Spend the gold, and roll your D10:
+							</p>
+							<ul>
+								<li>
+									<b>If the result is odd,</b> it works perfectly.
+								</li>
+								<li>
+									<b>If it’s even,</b> it mostly works but something goes amiss.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-advancement">
+			<div class="page2-grid">
+				<div class="page2-col1">
+					<h1 class="black-header">NEO ADVANCEMENTS</h1>
+					<h2>NEW GIFT</h2>
+					<p>You acquire another gift of the Fair. How did you get it? Choose one: gain a new Gift, or Upgrade an existing Gift.</p>
+					<h2>UPGRADE</h2>
+					<p>You’re getting better at harnessing your gifts. Pick an extra upgrade on one of them.</p>
+					<h2>GOLD SOURCE</h2>
+					<p>
+						At the start of each day, you receive one Fair Gold via a reasonably safe method. What is it?
+					</p>
+					<h2>SICK-ASS RIDE</h2>
+					<p>
+						You can create, summon or otherwise generate a vehicle that can transport the rest of the party, and a couple of friends. When in this form, you travel as fast as a horse.
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								WHAT DOES IT LOOK LIKE?<br>
+								<input type="checkbox" name="attr_NeoRideLook1">
+								<span>
+									1950s sci-fi, all chrome
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideLook2">
+								<span>
+									2010s heavy-duty serious tech
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideLook3">
+								<span>
+									2070s bleeding-edge cyberpunk
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideLook4">
+								<span>
+									Something else:<br><input type="text" name="attr_NeoRideLookOther" style="width: 1fr">
+								</span>
+							</div>
+							<div class="sheet-col">
+								WHERE DOES IT COME FROM?<br>
+								<input type="checkbox" name="attr_NeoRideSource1">
+								<span>
+									You summon it
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideSource2">
+								<span>
+									It emerges from your body
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideSource3">
+								<span>
+									You transform into it
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoRideSource4">
+								<span>
+									Something else:<br><input type="text" name="attr_NeoRideLookOther" style="width: 100%">
+								</span>
+							</div>
+						</div>
+					</p>
+					<p>
+						When you pick this ability, you can choose one of the following upgrades. Any time you choose an upgrade from now on,
+						you can upgrade your <b>SICK-ASS RIDE</b> instead.
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<input type="checkbox" name="attr_NeoRideUpgrade1">
+							<span>
+								It can travel underwater.
+							</span>
+							<br>
+							<input type="checkbox" name="attr_NeoRideUpgrade2">
+							<span>
+								It can travel in a vacuum.
+							</span>
+							<br>
+							<input type="checkbox" name="attr_NeoRideUpgrade3">
+							<span>
+								It can carry another party’s worth of people.
+							</span>
+							<br>
+							<input type="checkbox" name="attr_NeoRideUpgrade4">
+							<span>
+								The engine is silent.
+							</span>
+						</div>
+						<div class="sheet-col">
+							<input type="checkbox" name="attr_NeoRideUpgrade5">
+							<span>
+								It can reach orbit.
+							</span>
+							<br>
+							<input type="checkbox" name="attr_NeoRideUpgrade6">
+							<span>
+								It can fly at the speed of the fastest airborne creature in the world. Every time you take this, double its speed.
+							</span>
+						</div>
+					</div>
+					<h2>PAWN SHOP</h2>
+					<p>
+						The Neo has an extradimensional contact who has an interest in certain objects. They’ve agreed to buy them in exchange for Fair Gold; a fair price for services rendered.
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								WHO IS THIS CONTACT?<br>
+								<input type="checkbox" name="attr_NeoContact1">
+								<span>
+									A single Fair, turned eccentric from the loss of their other half
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContact2">
+								<span>
+									A demon prince with a crooked halo
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContact3">
+								<span>
+									A time-traveller in some manner of public convenience.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContact4">
+								<span>
+									Something else:<br><input type="text" name="attr_NeoContactOther" style="width: 1fr">
+								</span>
+							</div>
+							<div class="sheet-col">
+								WHAT DO THEY WANT?<br>
+								<input type="checkbox" name="attr_NeoContactWant1">
+								<span>
+									An exquisite meal they’ve never eaten before
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContactWant2">
+								<span>
+									A secret that would ruin someone’s life
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContactWant3">
+								<span>
+									Skulls of unusual species, but only once for any single species
+								</span>
+								<br>
+								<input type="checkbox" name="attr_NeoContactWant4">
+								<span>
+									Something else:<br><input type="text" name="attr_NeoContactWantOther" style="width: 100%">
+								</span>
+							</div>
+						</div>
+					</p>
+					<h2>THE BIG SCORE</h2>
+					<p>
+						You have become aware of how to rip off an entity for Fair Gold. You gain 2 gold every morning as long as you keep up the con or racket. Once a session, the GM can tweak the plot to explore the difficulties of maintaining the enterprise. If your Big Score is discovered, you lose the gold income until you can re-establish the scheme - or start a new one.<br>
+						WHAT’S THE CON?<br>
+						<input type="checkbox" name="attr_NeoScore1">
+						<span>
+							You’re skimming Fair Gold from the local Neo guild
+						</span>
+						<br>
+						<input type="checkbox" name="attr_NeoScore2">
+						<span>
+							You’ve convinced a cult that their god wants them to offer up Fair Gold
+						</span>
+						<br>
+						<input type="checkbox" name="attr_NeoScore3">
+						<span>
+							You’ve found the back door to a Reality Mine
+						</span>
+						<br>
+						<input type="checkbox" name="attr_NeoScore4">
+						<span>
+							You’re running a fake protection scheme, where people think they’re paying off a Mayfly Dragon.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_NeoScore5">
+						<span>
+							You’re running a pyramid scheme where people think they’re buying their very own eternal-life-guaranteed pyramid.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_NeoScore6">
+						<span>
+							Something else: <input type="text" name="attr_NeoScoreOther" style="width: 1fr">
+						</span>
+					</p>
+				</div>
+				<div class="page2-col2">
+					<h2>HACKROMANCER</h2>
+					<p>
+						The Neo gains the ability to create a beacon that gathers Fallen. When the beacon is activated with a piece of Fair Gold, it is as if the heavens opened and a biblical flood of Fallen fell upon the land. You do not control these Fallen.
+					</p>
+					<h2>DEUS EX MACHINA</h2>
+					<p>
+						You have gained access to a god-machine, capable of miraculous feats. It can do one impossible thing, but not before it’s fuelled by an impossibly rare material. When activated, it will achieve what it does, and then consuming its fuel and shut down.
+						<div class="sheet-2colrow">
+							<div class="sheet-col">
+								WHAT FORM IS IT?
+								<input type="checkbox" name="attr_MachinaForm1">
+								<span>
+									A deserted, confused spaceship.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaForm2">
+								<span>
+									A mecha suit missing a limb.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaForm3">
+								<span>
+									A naive pet AI-god.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaForm4">
+								<span>
+									Something else:<br><input type="text" name="attr_MachinaFormOther" style="width: 100%">
+								</span>
+							</div>
+							<div class="sheet-col">
+								WHAT POWERS IT?
+								<input type="checkbox" name="attr_MachinaPower1">
+								<span>
+									Fair Gold purified and distilled by a difficult, obscure method.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaPower2">
+								<span>
+									A bottled aspect of a god.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaPower3">
+								<span>
+									The possibility of one of your dreams ever being real.
+								</span>
+								<br>
+								<input type="checkbox" name="attr_MachinaPower4">
+								<span>
+									Something else:<br><input type="text" name="attr_MachinaPowerOther" style="width: 100%">
+								</span>
+							</div>
+						</div>
+					</p>
+					<h2>CHOSEN OF THE FAIR</h2>
+					<p>
+						You gain a special relationship with the Fair, and are able to come to an understanding with them—at least, as much as anyone can understand the Fair. Reselect your gifts and upgrades in a burst of apotheosis. You gain the ability to summon the Fair once a session with a strange ritual.
+					</p>
+					<h2 class="black-header">AT LEVEL 10: AN INTERESTING DECISION</h2>
+					<p>
+						You are confronted by two of the Fair. They explain that you’re a creature of both worlds, perfectly balanced between the two. As such, the Fair will give you an interesting decision – to accept a gift or not. One Fair says that if they take the gift, if they leave Die and return to reality, there will be no consequences. The other says that if they take the gift, if they leave Die and return to reality, they will suffer a consequence as a result of this decision.You may then choose to accept the gift or not. It is an interesting decision.
+					</p>
+					<p>
+						If you accept, gain access to a single gift with an upgrade of your choice. If not, you get nothing. Whatever your choice, you gain the ability to have a second <b>Defensive</b> upgrade. If you return to Earth, roll a D10. If it’s even, the first Fair was correct and you suffer no consequences. On an odd number, the second Fair was correct, and you suffer a consequence from having accepted this gift.
+					</p>
+				</div>
+				<div class="advancement-grid">
+					<img class="advancement-image" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/AdvancementMaps/NeoAdvancementMap.png?raw=true">
+					<input type="checkbox" name="attr_advancement1" style="grid-row: 2/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement2" style="grid-row: 1/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement3" style="grid-row: 1/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement4" style="grid-row: 2/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement5" style="grid-row: 3/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement6" style="grid-row: 4/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement7" style="grid-row: 3/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement8" style="grid-row: 4/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement9" style="grid-row: 3/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement10" style="grid-row: 5/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement11" style="grid-row: 6/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement12" style="grid-row: 5/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement13" style="grid-row: 7/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement14" style="grid-row: 8/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement15" style="grid-row: 9/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement16" style="grid-row: 10/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement17" style="grid-row: 9/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement18" style="grid-row: 10/span 1;grid-column: 9/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement19" style="grid-row: 9/span 1;grid-column: 10/span 1;height: 35%;">
+				</div>
+			</div>
+		</div>
+		<div class="sheet-gifts">
+			<h1 class="black-header">NEO GIFTS</h1>
+			<div class="sheet-3colrow">
+				<div class="sheet-col">
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<input type="checkbox" name="attr_Gun">
+							<span>
+								<b>Gun</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_GunActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						The Fair have gifted you with an arcane firearm. <i>Works as a normal ranged weapon without being activated.</i>
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_GunUpgrade1">
+						<span>
+							<b>Explosive.</b> Your ranged attacks gain: <i><b>Special:</b> apply an extra individual hit to another target in the vicinity.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade2">
+						<span>
+							<b>Homing.</b> Your ranged attacks gain: <i><b>Special:</b> this individual hit—not the whole attack—bypasses <b>Guard.</b></i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade3">
+						<span>
+							<b>AI-Assisted Targeting.</b> The gun’s attacks ignore all environmental Disadvantages.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade4">
+						<span>
+							<b>Phasers to Stun.</b> The gun’s non-lethal attacks ignore all Disadvantages.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade5">
+						<span>
+							<b>Trick Shooting.</b> The Gun can fire precisely enough to act as a form of telekinesis: you can knock on windows, ring doorbells, open doors and perform other feats of accuracy.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade6">
+						<span>
+							<b>Tracking.</b> Its attacks gain <i><b>Special:</b> the target can be reliably traced for 24 hours.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade7">
+						<span>
+							<b>Sniper.</b> You can shoot as far as you can see.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_GunUpgrade8">
+						<span>
+							<b>Sentry Gun.</b> The gun can be left behind to guard a stationary position, and obey a simple set of orders. When it’s next activated, it instantly appears in the Neo’s hands.
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Projector">
+							<span>
+								<b>Light Field Projector</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_ProjectorActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You can generate an utterly convincing visual illusion or make yourself practically invisible.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_ProjectorUpgrade1">
+						<span>
+							<b>Reactive Combat Invisibility (Defensive).</b> Gain <b>+1 Defence.</b>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ProjectorUpgrade2">
+						<span>
+							<b>Invisibility Field.</b> You may make one other human-sized creature invisible.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ProjectorUpgrade3">
+						<span>
+							<b>Enhanced Invisibility.</b> In addition to sight, your sound, smell, psychic aura and trace magical energy are also concealed.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ProjectorUpgrade4">
+						<span>
+							<b>Distance Projection.</b> Your illusion continues when you leave an area.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ProjectorUpgrade5">
+						<span>
+							<b>Active Update.</b> You can project an illusion onto yourself in real-time as a disguise.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ProjectorUpgrade6">
+						<span>
+							<b>Immersion Enhancement.</b> Your illusion can create sounds, smells and physical feedback akin to a 4D cinema experience.
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_ForceField">
+							<span>
+								<b>Force Field</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_ForceFieldActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You’re able to create and reshape an energy field in your vicinity. This force field has <b>Health</b> equal to your <b>Int</b>.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_ForceFieldUpgrade1">
+						<span>
+							<b>Active Defense Protocol (Defensive).</b> Your Guard is now equal to your <b>Int</b> plus your <b>Dex</b>.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ForceFieldUpgrade2">
+						<span>
+							<b>Autonomous Field.</b> You can create a force field in your vicinity which will remain after you leave the area. It can take damage equal to your <b>Int</b> before collapsing. Attacking and damaging this force field has <b>Difficulty 1</b>.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ForceFieldUpgrade3">
+						<span>
+							<b>Kinetic Redirection.</b> All attacks on anything protected by your force field gain: <b>Mandatory Special: Restore 1 Health to the active forcefield.</b>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_ForceFieldUpgrade4">
+						<span>
+							<b>Buddy-Help&#8482; Protocol.</b> The rest of the party are protected with a supplementary microforce field. They gain <b>+1 Guard.</b>
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_EnergyWeapon">
+							<span>
+								<b>Energy Weapon</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_EnergyWeaponActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You have a searing energy weapon. If you wish, you may use <b>Dex</b> for its dice pool instead of <b>Str</b>. <i>Works as a normal blade without being activated.</i>
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade1">
+						<span>
+							<b>Phantom.</b> Your close combat attacks gain: <i><b>Special:</b> this individual hit—not the whole attack—bypasses <b>Guard</b>.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade2">
+						<span>
+							<b>Searing.</b> Your close combat attacks gain: <i><b>Special:</b> ignite opponent, doing 1 <b>hit</b> per round until extinguished.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade3">
+						<span>
+							<b>Neurosleep.</b> Your close combat attacks gain: <i><b>Special:</b> target is hit by a sedative. If they are hit by a sedative a number of times equal to their <b>Con</b>, they fall unconscious.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade4">
+						<span>
+							<b>Returning.</b> When thrown, the weapon returns to the Neo.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade5">
+						<span>
+							<b>Cleave.</b> Your close combat attacks gain: <i><b>Double-Special:</b> apply this whole attack to another target within range.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_EnergyWeaponUpgrade6">
+						<span>
+							<b>Fatality!</b> Your close combat attacks gain: <i><b>Special:</b> if this attack kills an opponent, describe a particularly horrific death sequence. All opponents capable of being horrified in the area suffer 1 Disadvantage when fighting you for the rest of the encounter.</i>
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Pet">
+							<span>
+								<b>Pet</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_PetActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You have an awesome cybernetic pet. When summoned, it’s also autonomous and capable of following instructions. Its <b>Defence</b> is the same as yours. Any <b>Wound</b> inflicted on your pet is transferred to you. When <b>Wounded</b>, it dematerialises and reappears beside you.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_PetUpgrade1">
+						<span>
+							<b>Distracting.</b> If your pet assists you in an attack, you gain <i><b>Special:</b> remove 2 <b>Guard</b>.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_PetUpgrade2">
+						<span>
+							<b>Tracker.</b> If given a sample of a target, the pet can lead you to it.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_PetUpgrade3">
+						<span>
+							<b>Alert.</b> The pet alerts you to any ambush before it happens – you always start with full <b>Guard.</b>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_PetUpgrade4">
+						<span>
+							<b>Gold Hunter.</b> Your pet can be sent to scavenge fair gold, and will return with the gold after the next encounter (longer if the GM wishes). Roll your <b>Int</b> pool and find 1 Fair Gold on a success, with: <i><b>Special:</b> gain an extra gold.<i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_PetUpgrade5">
+						<span>
+							<b>Protective.</b> If an attack would kill the Neo and the pet is present, the pet can sacrifice itself to negate the attack. The Pet deactivates, disappearing in a shower of light, and must be reactivated to bring it back.
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Wetwork">
+							<span>
+								<b>Wetwork</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_WetworkActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						Your body and blood have been upgraded. You heal quicker, tire slower, can perform feats of physical strength and endurance, and have active control of your body’s systems.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_WetworkUpgrade1">
+						<span>
+							<b>Reflex Boost.</b> You always act first in any initiative order.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WetworkUpgrade2">
+						<span>
+							<b>Speed Boost.</b> All your actions gain: <i><b>Special:</b> take an extra move. You can’t be attacked during this move.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WetworkUpgrade3">
+						<span>
+							<b>Instant Reflexes (Defensive).</b> Gain <b>+1 Defence</b>.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WetworkUpgrade4">
+						<span>
+							<b>Horsepower.</b> You can move twice as fast or far as normal.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WetworkUpgrade5">
+						<span>
+							<b>Regeneration (Defensive).</b> Heal <b>1 Health</b> per round. Fully heal between combats.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_WetworkUpgrade6">
+						<span>
+							<b>Resurrection Protocol.</b> If you die, roll a <b>Con</b> pool at the end of the combat with: <i><b>Special:</b> return to life.</i>
+						</span>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Ai">
+							<span>
+								<b>Full AI Enhancement</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_AiActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You augment your AI to access its full potential. When you’re hacking, include your D10 in the roll.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_AiUpgrade1">
+						<span>
+							<b>Information Database.</b> Choose the AI’s specialist subject. The smaller the area, the more complete the knowledge.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_AiUpgrade2">
+						<span>
+							<b>Hacking Protocol Interface.</b> If you manually interface with a system, you’re immune to any physical feedback on a failure.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_AiUpgrade3">
+						<span>
+							<b>Subpersonality.</b> Your AI simulates a single known person, living or dead, who can be interrogated and questioned.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_AiUpgrade4">
+						<span>
+							<b>BioHacking Extension.</b> Choose one group of creatures; you can hack them like Fallen.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_AiUpgrade5">
+						<span>
+							<b>Fallen Leash.</b> You can control a hacked Fallen indefinitely, as if you’d rolled a Special every round. You can control one Fallen at a time for each time you’ve taken this upgrade.
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Cyber">
+							<span>
+								<b>Cybernetic Enhancement</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_CyberActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						A powered exoskeleton grows over and through your body, rendering you an armoured fighting machine capable of feats of supernatural strength and resilience.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_CyberUpgrade1">
+						<span>
+							<b>Hardcase (Defensive).</b> Gain <b>+1 Defence</b>.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade2">
+						<span>
+							<b>Energy Gun.</b> You have a built-in gun. Pick one <b>Gun</b> upgrade. You cannot add further upgrades.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade3">
+						<span>
+							<b>Energy Weapon.</b> You have a built in energy weapon. Pick one <b>Energy Weapon</b> upgrade. You cannot add further upgrades.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade4">
+						<span>
+							<b>Sensory Array.</b> Your senses expand into a generalised radar in the locale, and you can see through obstacles.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade5">
+						<span>
+							<b>Reactor.</b> You have a reactor in your exoskeleton. When activated, it gains three charges used in the place of Fair Gold for the sole purpose of overcharging your other gifts.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade6">
+						<span>
+							<b>Sealed.</b> You can survive in hard vacuum and other outlandish environments. You no longer need to eat. If you do ingest poison somehow, it doesn’t affect you.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_CyberUpgrade7">
+						<span>
+							<b>Jetpack.</b> You can fly at the speed of the fastest airborne creature in the world. Each time you take this, your speed doubles.
+						</span>
+					</p>
+					<div class="sheet-2colrow">
+						<div class="sheet-col" style="width:60%;margin-right:0px">
+							<input type="checkbox" name="attr_Blink">
+							<span>
+								<b>Blink Teleporter</b>
+							</span>
+						</div>
+						<div class="sheet-col" style="width:40%;float:right">
+							<input type="checkbox" name="attr_BlinkActive">
+							<span class="grey-text" style="font-size:12px">
+								ACTIVATED
+							</span>
+						</div>
+					</div>
+					<p>
+						You can chain together short-distance teleports, about as far as you could jump with a run up.
+					</p>
+					<p class="page3-NeoUpgrades">
+						<input type="checkbox" name="attr_BlinkUpgrade1">
+						<span>
+							<b>Combat Shift Protocol (Defensive).</b> Gain <b>+1 Defence</b>.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_BlinkUpgrade2">
+						<span>
+							<b>Optic Triangulation.</b> You can teleport anywhere you can see.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_BlinkUpgrade3">
+						<span>
+							<b>Duo Port.</b> You can teleport one other person with you.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_BlinkUpgrade4">
+						<span>
+							<b>Telefrag.</b> You can use your teleportation offensively by teleporting something inside your target. Your melee attacks gain: <i><b>Special:</b> target suffers 1 <b>Wound</b>.</i>
+						</span>
+						<br>
+						<input type="checkbox" name="attr_BlinkUpgrade5">
+						<span>
+							<b>Shift-TK.</b> You can teleport small nearby objects.
+						</span>
+						<br>
+						<input type="checkbox" name="attr_BlinkUpgrade6">
+						<span>
+							<b>Retrieve Protocol.</b> Once a day, you can attune to any object you can lift. It can then be teleported to you, from any distance.
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Godbinder -->

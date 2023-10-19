@@ -36,6 +36,7 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 .sheet-basic,
 .sheet-advancement,
 .sheet-vent,
+.sheet-gifts,
 .sheet-gods {
     display: none;
 }
@@ -44,6 +45,7 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 .sheet-tabstoggle[value="basic"] ~ div > div.sheet-basic,
 .sheet-tabstoggle[value="advancement"] ~ div > div.sheet-advancement,
 .sheet-tabstoggle[value="vent"] ~ div > div.sheet-vent,
+.sheet-tabstoggle[value="gifts"] ~ div > div.sheet-gifts,
 .sheet-tabstoggle[value="gods"] ~ div > div.sheet-gods {
     display: block;
 }
@@ -66,6 +68,12 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 }
 
 .page1-grid-knight
+{
+	display: grid;
+	grid-template: 5% 12% 13% 1fr 1fr/20% 1fr;
+}
+
+.page1-grid-neo
 {
 	display: grid;
 	grid-template: 5% 12% 13% 1fr 1fr/20% 1fr;
@@ -148,6 +156,12 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 {
 	grid-column: 2/span 1;
 	grid-row: 4/span 2;
+}
+
+.page3-NeoUpgrades
+{
+	font-size:11px;
+	padding-left:10px;
 }
 
 .emotions
@@ -245,6 +259,11 @@ h1 {
 .grey-text
 {
 	color: #808080;
+}
+
+.grey-background
+{
+	background: #dcdcdc;
 }
 
 /* HR line */
