@@ -79,6 +79,12 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 	grid-template: 5% 12% 13% 1fr 1fr/20% 1fr;
 }
 
+.page1-grid-godbinder
+{
+	display: grid;
+	grid-template: 7% 15% 15% 1fr 1fr/20% 1fr;
+}
+
 .page1-header1
 {
 	grid-column: 1/span 1;
