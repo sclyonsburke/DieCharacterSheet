@@ -272,6 +272,17 @@ h1 {
 	background: #dcdcdc;
 }
 
+.god-level
+{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.god-table tr
+{
+	border-top: 1pt solid black;
+}
+
 /* HR line */
 
 hr {

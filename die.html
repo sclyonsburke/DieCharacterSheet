@@ -2914,6 +2914,625 @@
 				</div>
 			</div>
 		</div>
+		<div class="sheet-gods">
+			<div class="sheet-2colrow black-header">
+				<div class="sheet-col" style="width:10%">
+					<h1 class="black-header">GODS</h1>
+				</div>
+				<div class="sheet-col" style="text-align:right;font-size:12px;width:85%">
+					Gain 1 Trust for every level above 3. Each point of Trust lets you avoid marking a God Debt 1/session.
+				</div>
+			</div>
+			<div class="sheet-3colrow">
+				<div class="sheet-col">
+					<h1>
+						<input type="text" name="attr_LightName" style="width: 70%"/><br>
+						THE GOD OF LIGHT
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelLight" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtLight" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustLight" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						The classic god of healing and protection, though “caring” need not mean “kind”.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Healing Light:</b> Heal a target within a short distance. <b>1 Health</b> healed per success, up to your level in this god.<br>
+								<i><b>Special:</b> 1 extra <b>Health</b> healed.<br>
+								<b>Special:</b> inflicts a disadvantage on anyone attacking the target for the rest of an encounter.<br>
+								<b>Special:</b> target gains an advantage to any attack made against creatures of darkness for the rest of the encounter.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>Bless:</b> For each success you roll, bless a nearby target. For this encounter, all attempts to attack the target(s) suffer a Disadvantage, and their attacks gain:<br>
+								<i><b>Special:</b> if this hit Wounds a creature of darkness, it deals 2 Wounds instead.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Divine Light:</b> Ranged attack, single target, far range.<br>
+								<i><b>Special:</b> blind target for rest of the encounter, inflicting at least 2 disadvantages on anything requiring sight.<br>
+								<b>Special:</b> if this hit Wounds, it deals 2 instead.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_UnderName" style="width: 70%"/><br>
+						THE UNDERWORLD GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelUnder" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtUnder" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustUnder" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						Some death gods are loving. Some are hateful. They each have a place for us all.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>The Skeletons:</b> For every success, summon one stop-motion skeleton or similar bone-construct per level in this god. All their stats are 2, and they have <b>Health 2</b>, <b>Guard 0</b> and <b>Defence 0</b>. They follow your orders, but are otherwise non-sentient. Casting the Scripture again will destroy all skeletons from a previous casting.
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>The Reaper:</b> Summon a weapon of bone and death. Decide its look. A scythe is traditional, but you can define it how you wish each time you cast this spell.<br>
+								Choose whether it attacks in melee (with either <b>Str</b> or <b>Dex</b>) or ranged (with <b>Dex</b>, <b>Int</b> or <b>Wis</b>). Gain an advantage on all attacks with this weapon and on any attempts to intimidate living beings.<br>
+								<i><b>Special:</b> if this hit <b>Wounds</b>, heal <b>1 Health</b> to any target.<br>
+								<b>Special:</b> if this hit <b>Wounds</b>, it deals 2 instead.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>The Bell Tolls:</b> Requires a bell or similar object. Once per encounter, ring it to roll a Wis dice pool and use it to attack everyone within earshot except the Godbinder.<br>
+								<i><b>Special:</b> the target is struck by a vision of how they’ve wasted their life. They are stunned for a round of combat as they wrestle with the existential horror.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_FateName" style="width: 70%"/><br>
+						THE FATE GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelFate" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtFate" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustFate" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						The embodiment of destiny. Perhaps solemn. Perhaps far more mischievous.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Prophecy:</b> You get sharp visions of future events. Roll a <b>Wis</b> dice pool and count the successes. For every level in this god you have, add <i><b>Special:</b> add 1 extra success.</i> You can spend each success to add either an Advantage or Disadvantage to any roll for the rest of the encounter. When you do so, describe the fate you saw and how your sudden action tried to avert it. You can spend no more than your level in the god on any one roll. You lose all unspent successes if you re-cast this spell.
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>Tragic Fate:</b> Ranged attack, single target, medium range. You give a vivid psychic vision of an awful fate that awaits the target. In addition to doing damage, for the rest of the encounter they suffer a Disadvantage on all actions from sheer existential horror. You can only use this on any given target once per encounter.<br>
+								<i><b>Special:</b> you know what the vision was.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Avatar of Destiny:</b> You commit yourself to the web of fate, for better or worse. For the length of the encounter, your every action is what must happen, to best effect. If your <b>Wis</b> is higher than your <b>Dex</b>, your maximum <b>Guard</b> is now equal to your <b>Wis</b> and you set it to full. All your attacks gain:
+								<i><b>Special:</b> this hit causes 2 hits.
+								<b>Special:</b> recover 2 Guard.
+								<b>Mandatory Double-Special:</b> you suffer a calamity and fall to 0 health. Describe how.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_TrickName" style="width: 70%"/><br>
+						THE TRICKSTER GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelTrick" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtTrick" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustTrick" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						For the smartest person in the room, the smartest god in the pantheon. Trouble.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>The Last Place You Look:</b> Roll a <b>Wis</b> pool and gain +1 temporary <b>Guard</b> for each success, up to your levels in this god. For each level in this god you have, add:<br>
+								<i><b>Special:</b> gain an extra temporary <b>Guard</b>.</i><br>
+								If you recast the spell, lose all temporary <b>Guard.</b>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>Distraction:</b> A catastrophic illusion startles everyone in a close area. Everyone except you suffers 1 disadvantage.<br>
+								<i><b>Special:</b> a specific individual can safely leave, unobserved.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Backstab:</b> Must be cast whilst holding a symbolic, prepared dagger. If a target is unaware of your presence or has an unguarded back for you to stab in, your next attack gains:<br>
+								<i><b>Special:</b> this hit bypasses <b>Guard</b>
+								<b>Double-Special:</b> all the hits in this attack bypass <b>Guard</b>
+								<b>Special:</b> any enemies are now unaware of your presence
+								<b>Special:</b> you gain knowledge of one secret of the target.
+								<b>Special:</b> one person close to target will betray them in a significant and painful way in the next week.</i>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="sheet-col">
+					<h1>
+						<input type="text" name="attr_ExcessName" style="width: 70%"/><br>
+						THE GOD OF EXCESS
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelExcess" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtExcess" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustExcess" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						A god of inebriation, delight, sensuality and pure, impure hedonism.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Party Hard:</b> Target feels a supernatural high. For every level in this god, you can affect an extra target. Describe how this high makes everyone feel and choose one of the following effects (applied to all targets):
+								<ul>
+									<li>Attacks on them gain a Disadvantage as their pain is numbed.</li>
+									<li>Their close combat attacks get an Advantage from an adrenaline rush.</li>
+									<li>They can see the unseen and other realms.</li>
+								</ul>
+								All actions of those targeted gain <i><b>Mandatory Double-Special:</b> I don’t feel so good any more. They become sick and lose this spell’s bonus, suffering a Disadvantage for the rest of the encounter.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								Blackout Drunk: Make all mortal human-sized or smaller individuals within close range of a point fall asleep. Roll your <b>Wis</b> pool and compare successes to each target’s highest Stat. If you match or exceed the target’s score, they fall asleep. Targets may be awoken by any normal means. When they are roused, they suffer a Disadvantage on all actions during the encounter from the headache.
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Higher State of Consciousness:</b> Alter your mental bounds of perception and roll a <b>Wis</b> pool. On a success, for this encounter:
+								<ul>
+									<li>You’re intangible</li>
+									<li>You’re invulnerable to physical attacks and can fly</li>
+									<li>You can attack psychically using Wis</li>
+									<li>All rolls gain <i><b>Special:</b> Ask the GM a question and they will answer you, if possibly in an overtly faux-profound way.</i></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_WildName" style="width: 70%"/><br>
+						THE GOD OF THE WILD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelWild" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtWild" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustWild" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						A god of animals, plant life and all things druidic.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Furious Briars:</b> Create an area of aggressive plant life which attacks all enemies within close range of you every round for the rest of the encounter, dealing 1 damage per success up to your level in this god. You can move freely through the area.<br>
+								<i><b>Special:</b> immobilize target, Str test to break free.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>Summon Beast:</b> Summon a beast that lives in the habitat you’re presently in. It obeys you for an encounter. The beast’s stats all begin at 2. For every success you roll, increase a stat by 1, up to your level in this god.
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Animal Form:</b> Transform into a hulking beast of your choice. You gain temporary <b>Health</b> equal to the successes rolled. If your <b>Str</b> is lower than your <b>Wis</b>, your <b>Str</b> is temporarily increased to match. You can revert at will.
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_WarName" style="width: 70%"/><br>
+						THE WAR GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelWar" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtWar" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustWar" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						There are no atheists in trenches.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Enchanted Weapon:</b> Choose one weapon you are holding. It gains an advantage on attacks until the end of the encounter, as well as the following specials.<br>
+								<i><b>Special:</b> a ridiculously powerful-looking blast happens when you make the attack.<br>
+								<b>Special:</b> angelic choirs sing as you strike.<br>
+								<b>Special:</b> you look absolutely amazing when you do this.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>The Right Stuff:</b> Once per encounter, gain combat wisdom by rolling a <b>Wis</b> pool and counting the successes. For every level in this god you have, add <i><b>Special:</b> add 1 extra success.</i> For the rest of this encounter, you can spend these successes to add one of the following Specials to any allied target’s roll after they roll:<br>
+								<i><b>Special:</b> add 1 extra success to this roll.<br>
+								<b>Special:</b> recover 1 Guard.<br>
+								<b>Double-Special:</b> recover 1 Health.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Godly Frenzy:</b> Let slip the gods of war. Gain temporary extra <b>Health</b> equal to your level in this god. All your attacks gain:<br>
+								<i><b>Special:</b> if this hit <b>Wounds</b>, it deals 2 instead.<br>
+								<b>Mandatory Triple-Special:</b> if possible, this attack hits a friendly target.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_ForgeName" style="width: 70%"/><br>
+						THE FORGE GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelForge" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtForge" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustForge" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						God of craft, technology and all those who work by their hands and their mind.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>My Robot Friend:</b> Summon a human-sized construct friend, redolent with your Forge God’s aesthetic, who can follow orders for the length of an encounter. Casting this again dispels your pre-existing Robot Friend. For each level you have in this god, gain	<i><b>Special:</b> you can pick an extra upgrade for your robot friend.</i><br><br>
+								<b>ROBOT FRIEND</b><br>
+								All <b>Stats</b> are 2. It has <b>Guard 2, Health 2, Willpower 4, Defence 0</b>.<br>
+								<b>Abilities:</b> Cannot fight.<br>
+								For each level you have in the god, pick an upgrade (each can be picked more than once):
+								<div class="sheet-2colrow">
+									<div class="sheet-col">
+										<ul>
+											<li><b>+1 Str</b> (max 4)</li>
+											<li><b>+1 Con</b> (max 4)</li>
+											<li><b>+1 Defence</b> (max 4)</li>
+										</ul>
+									</div>
+									<div class="sheet-col">
+										<ul>
+											<li>It can fight.</li>
+											<li>It’s invulnerable to a hazard (fire, cold, etc).</li>
+										</ul>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								<b>Divine Hammer:</b> Summon a magical hammer for the length of an encounter. Ranged attack, single target, medium range. Uses <b>Str</b>. <i><b>Special:</b> knocks over target.</i><br>
+								You can target your robot friend to heal instead of harm – each hit heals 1 <b>Health</b>.
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>My Robot Fiend: Expands My Robot Friend with new options:
+								<ul>
+									<li>It can fly.</li>
+									<li>Once an encounter, it can unleash a blast that attacks everyone in a room at once.<br>
+									<i><b>Special:</b> ignite foe, doing 1 hit per round until extinguished.</i></li>
+									<li>It’s the size of a giant. Set its <b>Health</b> to double its <b>Con</b>.</li>
+									<li>It is an expert in a particular topic.</li>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="sheet-col">
+					<h1>
+						<input type="text" name="attr_FireName" style="width: 70%"/><br>
+						THE FIRE GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelFire" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtFire" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustFire" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						A god of immolation, passion, destruction and perhaps invention.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Fire Blast:</b> Ranged attack, single target, medium range.<br>
+								<i><b>Special:</b> ignite foe, inflicting 1 hit per round until extinguished.<br>
+								<b>Special:</b> this attack also affects an extra close target (up to your levels in this god).</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								 <b>Living Inferno:</b> Transform target into a living inferno for the length of an encounter. Target is immune to flame damage and their attacks gain: <i><b>Special:</b> ignite foe, inflicting 1 Hit per round until extinguished.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Phoenix:</b> Requires a dead body to cast. From it bursts an enormous flying bird, wreathed in a fire which only harms your enemies. Once it starts to fight, it lasts til the end of the encounter. The phoenix can carry the party and a few others. The phoenix has <b>Str 3, Dex 3</b> and <b>Health 3</b>, and its attacks have <i><b>Special:</b> ignite foe, inflicting 1 Hit/round til extinguished.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_EldritchName" style="width: 70%"/><br>
+						THE ELDRITCH GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelEldritch" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtEldritch" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustEldritch" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						A god beyond our imaginations, wrapping its cold tentacles around existence. Its believers tend to end up dead. Be careful.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Sacrificial Knife:</b> Summon an unholy blade of eldritch design. To use, inflict 1 <b>Wound</b> on yourself and gain a number of Advantages equal to your level in the god on your attack.<br>
+								<i><b>Special:</b> if this hit kills a living target, remove one debt to the Eldritch God.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								 <b>Frenzy of the Abyss-Touched:</b> Begin chanting an awful liturgy. Everyone that joins in gets the following effects:
+								 <ul>
+									<li>Gain an advantage on all attacks</li>
+									<li>Gain temporary Health equal to their own <b>Con</b></li>
+									<li>Lose all <b>Guard</b></li>
+								</ul>
+								<i><b>Special:</b> remove one debt to the Eldritch God and give a participant one debt to the god, which the Eldritch God can call on as per usual Godbinder rules.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>Summon Abomination:</b> With a fresh corpse killed with the <b>Sacrificial Knife</b>, you can summon an abomination which remains until dawn (or until you dismiss it) For every success in your dice pool when summoning, you can describe an aspect of its appearance and that aspect’s implicit capabilities.<br>
+								It has <b>Str 4, Con 4</b> and <b>Health 4</b>.<br>
+								Its attacks have <i><b>Double-Special:</b> the target’s mind temporarily collapses, they fall to the floor in a catatonic state.</i><br>
+								Its actions and the summoning roll have<br>
+								<i><b>Mandatory Triple-Special:</b> it breaks free of the Godbinder’s control.</i>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_StormName" style="width: 70%"/><br>
+						THE STORM GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelStorm" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtStorm" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustStorm" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						The elements unleashed, raging, and somewhat paternalistic.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>Lightning Blast:</b> Ranged attack, single target, long range. Can attack one target per level in this god.<br>
+								<i><b>Special:</b> deeply frazzled, the target suffers 1 disadvantage on their next action.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								 <b>Stormdancer:</b> If you’re beneath a cloudy sky, you and the party are transformed into lightning bolts and propelled in the sky. You return to the earth at a place of your choosing, anywhere beneath the same sky.<br>
+								 <i><b>Special:</b> the GM answers one question about the land beneath you as you travelled.<br>
+								 <b>Mandatory Special:</b> one person’s hair stands vertically for the rest of the day.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								Summon Lightning: When in an area with a storm, you can attack with a huge lightning strike.<br>
+								<i><b>Special:</b> if this <b>Wounds</b>, it deals 2 instead.<br>
+								<b>Special:</b> an additional nearby target is hit.<br>
+								<b>Double-Special:</b> if this Wounds, it deals 2 Wounds instead.</i><br>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h1>
+						<input type="text" name="attr_SeaName" style="width: 70%"/><br>
+						THE SEA GOD
+					</h1>
+					<div class="sheet-3colrow">
+						<div class="sheet-col" style="margin-right:0px">
+							LEVEL:
+							<input type="number" name="attr_LevelSea" min="0" max="10">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							DEBT:
+							<input type="number" name="attr_DebtSea" min="-5" max="5">
+						</div>
+						<div class="sheet-col" style="margin-right:0px">
+							TRUST:
+							<input type="number" name="attr_TrustSea" min="0" max="10">
+						</div>
+					</div>
+					<p>
+						A god of the ocean, in its stillness and its rage.
+					</p>
+					<table class="god-table">
+						<tr>
+							<td class="god-level">1</td>
+							<td>
+								<b>The Drowning:</b> Ranged attack, single target, medium range. Fill the target’s lungs with water. This spell can hit as many targets as you have levels in this god.<br>
+								<i><b>Special:</b> this hit bypasses <b>Guard</b> and, if the target needs to breathe air, they suffer 2 disadvantages on their next turn.</i>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">2</td>
+							<td>
+								 <b>Scale Armour:</b> You can summon the fish-scale armour of the knight of the sea. Describe the armour when you summon it. The armour remains until the next dawn; if you want to dismiss it before then, gain one <b>God Debt</b>. To summon this armour, roll a <b>Wis</b> pool. For every success, pick one:
+								 <ul>
+									<li>If your <b>Defence</b> is 0, increase <b>Defence</b> to 1</li>
+									<li>Survive indefinitely beneath water and walk on water</li>
+									<li>Your attacks gain <i><b>Special:</b> electrocute target—they suffer one Disadvantage on their next action</i></li>
+									<li>Pitch a minor water-based ability to the GM. Talk to a specific fish species? Follow squid pheromones? Eat plankton? The GM gets to say yes or no.</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="god-level">3</td>
+							<td>
+								<b>The Great Flood:</b> Waves crash into the surrounding area as if from nowhere, and the water level rapidly begins to rise. Roll a <b>Wis</b> pool to summon the flood. On a success, the flood is here. You can walk on the water, or move through it without penalty; everyone else suffers one Disadvantage to all actions. <i><b>Special:</b> raise the water further— everyone suffers a 2nd disadvantage.</i><br>
+								Every turn the water remains, choose one effect:
+								<ul>
+									<li>Attack everyone in the water with murderous fish</li>
+									<li>Attack a single target with murderous fish</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Master -->
