@@ -296,6 +296,11 @@ h1 {
 	border-top: 1pt solid black;
 }
 
+textarea
+{
+	height: 50px !important;
+}
+
 /* HR line */
 
 hr {

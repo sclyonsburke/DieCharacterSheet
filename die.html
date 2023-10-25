@@ -4393,6 +4393,12 @@
 				<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
 			</div>
 			<hr>
+			<br>
+			<b>Abilities</b>
+			<fieldset class="repeating_npc-abilities">
+				<input type="text" name="attr_ability-name"><br>
+				<textarea name="attr_ability-description" value="">
+			</fieldset>
 		</div>
 	</div>
 	
@@ -4400,41 +4406,30 @@
 		<div class="sheet-basic">
 			<div class="page1-grid-master">
 				<div class="page1-header1">
-					<h1>THE MASTER</h1>
+					<h1>THE FALLEN</h1>
 					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
 					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
 				</div>
 				<div class="page1-header2">
 					<div class="header-class-dice">
-						<h2>CLASS DICE: D20</h2>
 						<p>
-							MASTERY<br>
-							Your Master has Mastery: they can add their D20 when casting spells. If they do, the dice roll has the 20-special (activated on a 20):<br>
-							<i><p>20-Special:</b> this success counts as two successes.</i>
+							You are an undead monster.<br>
+							If you kill one of the other player characters, you become alive again.
 						</p>
 					</div>
-					<div class="header-die-image">
-						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D20.png?raw=true" style="height: 100px">
-					</div>
 				</div>
-				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Master.jpg?raw=true">
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Fallen.png?raw=true">
 				<div class="page1-sidebar">
 					<br>
+					<p>
+						<b>UNLIFE AFTER DEATH</b><br>
+						<i>You have died in the realm of Die. You are a monster - perhaps one similar to one of the ones you’ve been fighting. You thought they were little more than undead zombies. Now you know better.</i>
+					</p>
 					<i>
-						<p>Who rules?</p>
-						<p>The Master is the magic user as a reality manipulator. Sometimes you change the laws of physics. Sometimes you change the laws of the game. Sometimes you change the laws of fiction.</p>
-						<p>The Rules rule, and you rule the Rules. And you never, ever cheat.</p>
-						<p>Ever.</p>
-						<p>Oh, this is the GM section. We can be honest.</p>
-						<p>You cheat all the time.</p>
+						<p>You are different from some of them in one key way: you are sentient, holding onto your consciousness and your free will.</p>
+						<p>For now.</p>
+						<p>You lose access to any special abilities granted by your class, but keep your stats and equipment. Your vote to go home no longer counts, because you’re dead.</p>
 					</i>
-					<br>
-					<h3>PLAY THE MASTER IF YOU WANT TO...</h3>
-					<ul>
-						<li>Facilitate the game.</li>
-						<li>Break the rules of space, time and narrative to cast powerful magic</li>
-						<li>Cheat reality to get what you want at great risk</li>
-					</ul>
 				</div>
 				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
 				<div class="page1-stats">
@@ -4460,125 +4455,114 @@
 					</div>
 					<hr>
 				</div>
-				<div class="page1-equip sheet-2colrow">
-					<div class="sheet-col">
+				<div class="page1-simple sheet-2colrow">
+					<div class="sheet-col" style="width:60%">
+						<h3>NOT JUST A MONSTROUS FACE</h3>
+						Fallen are monsters, but some are interesting monsters. Your new form gives you a new ability. Choose one:
 						<div class="sheet-2colrow">
-							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
-							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
-						</div>
-						<p>
-							<input type="checkbox" name="attr_Equipment-Master1">
-							<span>
-								<b>Quarterstaff.</b><br>
-								<i><b>Special:</b> recover 1 <b>Guard</b>.</i>
-							</span> 
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Equipment-Master2">
-							<span>
-								<b>An elegant handgun.</b><br>
-								<i><b>Special:</b> if a hit <b>Wounds</b>, it does 2 <b>Wounds</b> against unarmoured foes.</i>
-							</span>
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Equipment-Master3">
-							<span>
-								<b>A huge tome.</b><br>
-								Advantage on tasks involving research, heavy enough to be an improvised club.
-							</span>
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Equipment-Master4">
-							<span>
-								Something else: <input type="text" name="attr_master-equip-other" style="width: 1fr">
-							</span>
-						</p>
-				   </div>
-				   <div class="sheet-col">
-						<div class="sheet-2colrow">
-							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
-							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
-						</div>
-						<span>You are wearing (<b>Defense 0</b>)</span>
-						<p>
-							<input type="checkbox" name="attr_Look-Master1">
-							<span>
-								Wizard robes straight out of a 1980s kids fantasy cartoon.
-							</span> 
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Look-Master2">
-							<span>
-								Killer suits straight off a 1980s corporate bad guy.
-							</span>
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Look-Master3">
-							<span>
-								Fetish-wear straight out of a 1990s vampire LARP
-							</span>
-						</p>
-						<p>
-							<input type="checkbox" name="attr_Look-Master4">
-							<span>
-								Something else: <input type="text" name="attr_master-look-other" style="width: 1fr">
-							</span>
-						</p>
-				   </div>
-				</div>
-				<div class="page1-other">
-					<hr>
-					<div class="sheet-2colrow">
-						<div class="sheet-col">
-							<h3><span>HARDCORE CHEATING</span></h3>
-							<div class="sheet-2colrow">
-								<div class="sheet-col">
-									<h3 class="grey-text"><i>Cheat Tokens</i></h3>
-								</div>
-								<div class="sheet-col">
-									<input type="number" name="attr_CheatTokens" min="0" max="10" style="width: 45px;float: right">
-								</div>
+							<div class="sheet-col">
+								<p>
+									<input type="checkbox" name="attr_Fallen-Flight">
+									<b>FLIGHT</b><br>
+									You are able to soar through the sky at a sprinting pace. Decide what this looks like:
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Fallen-Flight1">
+									Wings<br>
+									<input type="checkbox" name="attr_Fallen-Flight2">
+									Thrusters<br>
+									<input type="checkbox" name="attr_Fallen-Flight3">
+									Enormous bloodcoated springs<br>
+									<input type="checkbox" name="attr_Fallen-Flight4">
+									Something else: <input type="text" name="attr_fallen-flight-other" style="width: 1fr">
+								</p>
+								
+								<p>
+									<input type="checkbox" name="attr_Fallen-Size">
+									<b>SIZE CHANGING</b><br>
+									You can swell to four times your height or shrink to a tenth of your size. Decide what this looks and/or sounds like:
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Fallen-Size1">
+									Cracking gristle and bone<br>
+									<input type="checkbox" name="attr_Fallen-Size2">
+									Folding and unfolding fractal limbs<br>
+									<input type="checkbox" name="attr_Fallen-Size3">
+									An incongruous slide-whistle<br>
+									<input type="checkbox" name="attr_Fallen-Size4">
+									Something else: <input type="text" name="attr_fallen-size-other" style="width: 1fr">
+								</p>
+								
+								<p>
+									<input type="checkbox" name="attr_Fallen-Intangible">
+									<b>INTANGIBILITY</b><br>
+									You are able to move spectrally through objects that bar your path. (This gives you no specific bonus to resist damage.) Decide what this looks like:
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Fallen-Intangible1">
+									Classic spectral<br>
+									<input type="checkbox" name="attr_Fallen-Intangible2">
+									A burst of digital noise<br>
+									<input type="checkbox" name="attr_Fallen-Intangible3">
+									Transformation into burrowing worms<br>
+									<input type="checkbox" name="attr_Fallen-Intangible4">
+									Something else: <input type="text" name="attr_fallen-intangible-other" style="width: 1fr">
+								</p>
 							</div>
-							<p>
-								The Master’s control of the rules is such they can actively break them. This is called Cheating: altering the game in a special way. You can only safely use these abilities by spending <b>Cheat Tokens</b>.
-							</p>
-							<p>
-								At the start of each session, gain <b>Cheat Tokens</b> equivalent to the number of other players in the game. When a combat begins, check the number of players who are opposing the Master. If you have more <b>Cheat Tokens</b> than players who are opposing you, reduce your <b>Cheat Tokens</b> to that number.
-							</p>
-							<p>
-								To cheat, spend a Cheat Token (and in combat, use an action), then pick an effect:
-								<ul>
-									<li><b>A miraculous event:</b> Teleport to escape. Create a temptation that fulfills a desire. Summon a hugely powerful monster. Create a fortress. Regain your mastery. Bend a rule.</li>
-									<li><b>Undo the effects of what has just happened:</b> Uniquely, this can be done as an instant response (i.e. if you are killed, you regenerate from the harm.)</li>
-								</ul>
-							</p>
-							<p>
-								If you have no cheat tokens remaining, you can still Cheat, but are risking your existence. Hide your D20 in one of two identical hiding places (e.g. your hands). Another player picks a hiding place.
-							</p>
-							<p>
-								<ul>
-									<li>If they choose incorrectly, you get away with it and the effect happens.</li>
-									<li>If they find it, the Powers That Be notice you. These are the judges of all reality, and they do not approve of Masters cheating. Your Master will not survive their attention.</li>
-								</ul>
-							</p>
+							<div class="sheet-col">
+								<p>
+									<input type="checkbox" name="attr_Fallen-Uncanny">
+									<b>UNCANNY SENSES</b><br>
+									You can perceive things far beyond normal human capabilities. Decide which type of thing you can sense:
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Fallen-Uncanny1">
+									Strong emotions<br>
+									<input type="checkbox" name="attr_Fallen-Uncanny2">
+									Heartbeats and breathing<br>
+									<input type="checkbox" name="attr_Fallen-Uncanny3">
+									Narrative<br>
+									<input type="checkbox" name="attr_Fallen-Uncanny4">
+									Something else: <input type="text" name="attr_fallen-uncanny-other" style="width: 1fr">
+								</p>
+								
+								<p>
+									<input type="checkbox" name="attr_Fallen-Shape">
+									<b>SHAPE CHANGING</b><br>
+									You can change your form to appear to be something else… until you attack. Decide what your tell is, no matter your form:
+								</p>
+								<p>
+									<input type="checkbox" name="attr_Fallen-Shape1">
+									Your voice remains an awful undead crackle<br>
+									<input type="checkbox" name="attr_Fallen-Shape2">
+									You smell like the rotting flesh you are<br>
+									<input type="checkbox" name="attr_Fallen-Shape3">
+									All animals view you with fear and suspicion<br>
+									<input type="checkbox" name="attr_Fallen-Shape4">
+									Something else: <input type="text" name="attr_fallen-shape-other" style="width: 1fr">
+								</p>
+							</div>
 						</div>
-						<div class="sheet-col">
-							<h3>MY WORLD, MY RULES</h3>
-							<p>
-								The Master has control over the nature of reality in the world they’re visiting—both the rules of the world, the rules of the game and the rules of narrative. This means they can easily perform magical effects equivalent to anything a powerful wizard can do.
-							</p>
-							<p>
-								Like any NPC, the Master can perform any spell you think reasonable and likely, based upon character conception. They can fly, throw fireballs, turn invisible, heal people, create incredible firework displays and generally be a wizard. The exception to this is any magical effect potent enough to match the <b>Hardcore Cheats</b>.
-							</p>
-							<p>
-								Any attack they make can have <i><b>Special:</b> ignite opponent, inflicting 1 hit per round until extinguished.</i>
-							</p>
-							<h3>MASTER ADVANCEMENT</h3>
-							<p>
-								If your game is including advancement, Masters advance whenever players do. The only advance in the basic Master is to gain a statistic point any time the rest of the group does. They gain no other abilities. They’re already brutally powerful thanks to the cheat tokens.
-							</p>
-						</div>
-					</div>
+				   </div>
+				   <div class="sheet-col" style="width:30%">
+						<p>
+							<h3>NOT JUST A MONSTROUS FACE</h3>
+							While your old weaponry might look the same, it’s changed. Many Fallen abandon the pretence, lose their weapons, and attack with claws sprouting from their body. All attacks you make gain:
+						</p>
+						<p>
+							<i><b>Special:</b> If this attack causes a <b>Wound</b>, then the target is poisoned. They lose <b>1 Health</b> per round until they pass a <b>Con</b> test.</i>
+						</p>
+						<p>
+							If you provide the killing wound to another Paragon, you immediately come to life and regain all your class abilities. Pass the Fallen sheet to the player you’ve just killed. They’re Fallen now. You instinctively know this to be true.
+						</p>
+						<p>
+							You are hungry for and jealous of what your peers possess. As far as you know, this is the only certain way a Fallen can return to their living status
+						</p>
+						<p>
+							<h3>SECOND DEATH?</h3>
+							You’re dead. At least the worst has happened, right? If you die again, you will rise again at the end of the encounter. You have a nagging feeling there are only so many times this can happen before you lose something fundamental.
+						</p>
+				   </div>
 				</div>
 			</div>
 		</div>
