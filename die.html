@@ -5,6 +5,9 @@
 	<input type="radio" name="attr_ParagonName" value="4">
 	<input type="radio" name="attr_ParagonName" value="5">
 	<input type="radio" name="attr_ParagonName" value="6">
+	<input type="radio" name="attr_ParagonName" value="7">
+	<input type="radio" name="attr_ParagonName" value="8">
+	<input type="radio" name="attr_ParagonName" value="9">
 	
 	<div class="tab-selection" style="padding-bottom: 10px">
 		<p align="center">
@@ -15,7 +18,10 @@
 				<option class="sheet-ParagonSelect" value="3">Emotion Knight</option>
 				<option class="sheet-ParagonSelect" value="4">Neo</option>
 				<option class="sheet-ParagonSelect" value="5">Godbinder</option>
-				<option class="sheet-ParagonSelect" value="6">Master</option>
+				<option class="sheet-ParagonSelect" value="6">Master (GM)</option>
+				<option class="sheet-ParagonSelect" value="7">Master (Player)</option>
+				<option class="sheet-ParagonSelect" value="8">NPC</option>
+				<option class="sheet-ParagonSelect" value="9">[REDACTED]</option>
 			</select>   
 		</p>
 		
@@ -3725,6 +3731,392 @@
 		</div>
 	</div>
 	
+	<div class="sheet-MasterPC" name="sheet-MasterPC">
+		<div class="sheet-basic">
+			<div class="page1-grid-master">
+				<div class="page1-header1">
+					<h1>THE MASTER (PC)</h1>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D20</h2>
+						<p>
+							MASTERY<br>
+							You start each session with Mastery. While you have it, you can add your D20 when casting spells. If you do, the dice roll includes the 20-special (activated on a 20).<br>
+							<i><p>20-Special:</b> this success counts as two successes.</i>
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D20.png?raw=true" style="height: 100px">
+					</div>
+				</div>
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Master.jpg?raw=true">
+				<div class="page1-sidebar">
+					<br>
+					<i>
+						<p>This is a role-playing game. Yes, you see a world around you… but you know there’s rules behind it. And someone running it. Ideally, one day it’s going to be you. Until then, you’re creeping around the edges of the game, seeing what you can get away with.</p>
+						<p>Most people look at you and think “wizard”. Pfft! Wizards cast spells. You mess with the rules to get what’s possible and outright cheat when you need the impossible. The world is a game. That means it’s your plaything.</p>
+						<p>Until someone notices you.</p>
+					</i>
+					<br>
+					<h3>PLAY THE MASTER IF YOU WANT TO...</h3>
+					<ul>
+						<li>Re-arrange rules to create your own custom magic spells.</li>
+						<li>Outright cheat when you need something literally impossible.</li>
+						<li>Beg for your life from judgemental extradimensional beings when you get caught.</li>
+					</ul>
+				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
+				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
+					<p align="center">
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
+					<hr>
+				</div>
+				<div class="page1-equip sheet-2colrow">
+					<div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master1">
+							<span>
+								<b>Quarterstaff.</b><br>
+								<i><b>Special:</b> recover 1 <b>Guard</b>.</i>
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master2">
+							<span>
+								<b>An elegant handgun.</b><br>
+								<i><b>Special:</b> if a hit <b>Wounds</b>, it does 2 <b>Wounds</b> against unarmoured foes.</i>
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master3">
+							<span>
+								<b>A huge tome.</b><br>
+								Advantage on tasks involving research, heavy enough to be an improvised club.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-equip-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				   <div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<span>You are wearing (<b>Defense 0</b>)</span>
+						<p>
+							<input type="checkbox" name="attr_Look-Master1">
+							<span>
+								Wizard robes straight out of a 1980s kids fantasy cartoon.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master2">
+							<span>
+								Killer suits straight off a 1980s corporate bad guy.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master3">
+							<span>
+								Fetish-wear straight out of a 1990s vampire LARP
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-look-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				</div>
+				<div class="page1-other">
+					<hr>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<h3><span>MY GAME, MY RULES</span></h3>
+							<p>
+								Select three Rules from the Rules section overleaf – elements of reality that you can manipulate with magic. You have power over these rules, and you do not suffer risk when you add them to spells that you have crafted.
+							</p>
+							<p>
+								To cast a spell, combine as many rules as you need to get the effect you desire. Then, calculate <b>Risk</b>:
+								<ul>
+									<li>
+										For every rule you don’t control, add <b>5 Risk</b>.
+									</li>
+									<li>
+										For every effect doing slightly more than the standard rule, add <b>1 Risk</b>.
+									</li>
+									<li>
+										For every effect doing massively more than the standard rule, add <b>5 Risk</b>.
+									</li>
+								</ul>
+								
+							</p>
+							<p>
+								If a spell has more than <b>20 Risk</b>, it cannot be cast. Otherwise, if the spell has any Risk, roll an <b>Int</b> pool including your Mastery D20.
+							</p>
+							<ul>
+								<li>
+									<b>If the D20 result is greater than the Risk,</b> you suffer no consequences for casting the spell.
+								</li>
+								<li>
+									<b>If the D20 result is equal to or less than the Risk,</b> the Master is caught in their Rules Lawyering by the Powers That Be. They lose their Mastery, and they can no longer add a D20 to rolls. If they’ve already lost Mastery this session, the Powers That Be deliver punishment – bodily harm, vile curses, ironic undoings, instant death, and worse. See overleaf for more details.
+								</li>
+							</ul>
+						</div>
+						<div class="sheet-col">
+							<h3>HARDCORE CHEATING</h3>
+							<p>
+								Rules can be bent, stretched and manipulated into achieving all kinds of effects, but there’s a greater magic at your control. You can break the laws of the universe entirely; you can cheat. But such blatant disregard for reality comes with a steep cost if discovered by the Powers That Be. Every Master has a style or a preference that determines the kind of cheats they can perform. What’s yours?<br>
+								<input type="checkbox" name="attr_Master-Gamist">
+								<b>Gamist Master.</b> You’re into messing with the rules written in this book. <i>Example: players don’t die when their health reaches zero.</i><br>
+								<input type="checkbox" name="attr_Master-Simulationist">
+								<b>Simulationist Master.</b> You’re into messing with the physical laws of the world. <i>Example: cause gravity to shift, summon a storm in a deserts.</i><br>
+								<input type="checkbox" name="attr_Master-Narrativist">
+								<b>Narrativist Master</b> You’re into messing with the story. <i>Example: exactly the right stranger turns up at the right time.</i>
+							</p>
+							<p>
+								To cheat, say what you want to do and the GM will describe a punishment if you’re caught. If you wish to continue, take two containers (e.g. your hands) and secretly hide the D20 in one of them. The GM guesses which container the D20 is in:
+								<ul>
+									<li>
+										<b>If they miss the D20,</b> you get away with it and the effect happens.
+									</li>
+									<li>
+										<b>If they find it,</b> the Powers That Be notice you. A trial will begin.
+									</li>
+								</ul>
+							</p>
+							<p>
+								A Trial is a short role-played scene. The Powers That Be appear before you, fully aware of the bad thing you’ve done. Prepare to beg for your life, make excuses or justify yourself quickly. Good luck.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="sheet-NPC" name="sheet-NPC">
+
+	</div>
+	
+	<div class="sheet-Fallen" name="sheet-Fallen">
+		<div class="sheet-basic">
+			<div class="page1-grid-master">
+				<div class="page1-header1">
+					<h1>THE MASTER</h1>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D20</h2>
+						<p>
+							MASTERY<br>
+							Your Master has Mastery: they can add their D20 when casting spells. If they do, the dice roll has the 20-special (activated on a 20):<br>
+							<i><p>20-Special:</b> this success counts as two successes.</i>
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D20.png?raw=true" style="height: 100px">
+					</div>
+				</div>
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Master.jpg?raw=true">
+				<div class="page1-sidebar">
+					<br>
+					<i>
+						<p>Who rules?</p>
+						<p>The Master is the magic user as a reality manipulator. Sometimes you change the laws of physics. Sometimes you change the laws of the game. Sometimes you change the laws of fiction.</p>
+						<p>The Rules rule, and you rule the Rules. And you never, ever cheat.</p>
+						<p>Ever.</p>
+						<p>Oh, this is the GM section. We can be honest.</p>
+						<p>You cheat all the time.</p>
+					</i>
+					<br>
+					<h3>PLAY THE MASTER IF YOU WANT TO...</h3>
+					<ul>
+						<li>Facilitate the game.</li>
+						<li>Break the rules of space, time and narrative to cast powerful magic</li>
+						<li>Cheat reality to get what you want at great risk</li>
+					</ul>
+				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
+				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
+					<p align="center">
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
+					<hr>
+				</div>
+				<div class="page1-equip sheet-2colrow">
+					<div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master1">
+							<span>
+								<b>Quarterstaff.</b><br>
+								<i><b>Special:</b> recover 1 <b>Guard</b>.</i>
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master2">
+							<span>
+								<b>An elegant handgun.</b><br>
+								<i><b>Special:</b> if a hit <b>Wounds</b>, it does 2 <b>Wounds</b> against unarmoured foes.</i>
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master3">
+							<span>
+								<b>A huge tome.</b><br>
+								Advantage on tasks involving research, heavy enough to be an improvised club.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-equip-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				   <div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<span>You are wearing (<b>Defense 0</b>)</span>
+						<p>
+							<input type="checkbox" name="attr_Look-Master1">
+							<span>
+								Wizard robes straight out of a 1980s kids fantasy cartoon.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master2">
+							<span>
+								Killer suits straight off a 1980s corporate bad guy.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master3">
+							<span>
+								Fetish-wear straight out of a 1990s vampire LARP
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-look-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				</div>
+				<div class="page1-other">
+					<hr>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<h3><span>HARDCORE CHEATING</span></h3>
+							<div class="sheet-2colrow">
+								<div class="sheet-col">
+									<h3 class="grey-text"><i>Cheat Tokens</i></h3>
+								</div>
+								<div class="sheet-col">
+									<input type="number" name="attr_CheatTokens" min="0" max="10" style="width: 45px;float: right">
+								</div>
+							</div>
+							<p>
+								The Master’s control of the rules is such they can actively break them. This is called Cheating: altering the game in a special way. You can only safely use these abilities by spending <b>Cheat Tokens</b>.
+							</p>
+							<p>
+								At the start of each session, gain <b>Cheat Tokens</b> equivalent to the number of other players in the game. When a combat begins, check the number of players who are opposing the Master. If you have more <b>Cheat Tokens</b> than players who are opposing you, reduce your <b>Cheat Tokens</b> to that number.
+							</p>
+							<p>
+								To cheat, spend a Cheat Token (and in combat, use an action), then pick an effect:
+								<ul>
+									<li><b>A miraculous event:</b> Teleport to escape. Create a temptation that fulfills a desire. Summon a hugely powerful monster. Create a fortress. Regain your mastery. Bend a rule.</li>
+									<li><b>Undo the effects of what has just happened:</b> Uniquely, this can be done as an instant response (i.e. if you are killed, you regenerate from the harm.)</li>
+								</ul>
+							</p>
+							<p>
+								If you have no cheat tokens remaining, you can still Cheat, but are risking your existence. Hide your D20 in one of two identical hiding places (e.g. your hands). Another player picks a hiding place.
+							</p>
+							<p>
+								<ul>
+									<li>If they choose incorrectly, you get away with it and the effect happens.</li>
+									<li>If they find it, the Powers That Be notice you. These are the judges of all reality, and they do not approve of Masters cheating. Your Master will not survive their attention.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="sheet-col">
+							<h3>MY WORLD, MY RULES</h3>
+							<p>
+								The Master has control over the nature of reality in the world they’re visiting—both the rules of the world, the rules of the game and the rules of narrative. This means they can easily perform magical effects equivalent to anything a powerful wizard can do.
+							</p>
+							<p>
+								Like any NPC, the Master can perform any spell you think reasonable and likely, based upon character conception. They can fly, throw fireballs, turn invisible, heal people, create incredible firework displays and generally be a wizard. The exception to this is any magical effect potent enough to match the <b>Hardcore Cheats</b>.
+							</p>
+							<p>
+								Any attack they make can have <i><b>Special:</b> ignite opponent, inflicting 1 hit per round until extinguished.</i>
+							</p>
+							<h3>MASTER ADVANCEMENT</h3>
+							<p>
+								If your game is including advancement, Masters advance whenever players do. The only advance in the basic Master is to gain a statistic point any time the rest of the group does. They gain no other abilities. They’re already brutally powerful thanks to the cheat tokens.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<br><br>
 	<font size="0.5">sheet version 0.0.1 for DIE<br>
@@ -3775,7 +4167,7 @@
 					numdice = 0;
 				}
 				var rollexpr = "";
-				if(numdice == 0){
+				if(numdice <= 0){
 					rollexpr = "&{template:die} {{name=@{character_name}}} {{roll_name="+statname+"}} {{stat_name="+statname+"}} {{roll=[[2d6kl1]]}} {{dice=[[0]]}}";
 				} else {
 					rollexpr = "&{template:die} {{name=@{character_name}}} {{roll_name="+statname+"}} {{stat_name="+statname+"}} {{roll=[["+numdice+"d6kh1]]}} {{dice=[[0]]}}";
@@ -3785,9 +4177,16 @@
 					var dicelist = "";
 					console.log(results.results);
 					console.log("Dice: "+results.results.roll.dice);
-					results.results.roll.dice.forEach(die => {
-						dicelist = dicelist + die + " | "
-					});
+					if(numdice <= 0)
+					{
+						dicelist = results.results.roll.result;
+					}
+					else
+					{
+						results.results.roll.dice.forEach(die => {
+							dicelist = dicelist + die + " | "
+						});
+					}
 					finishRoll(results.rollId,
 						{
 							dice: dicelist
@@ -3802,7 +4201,6 @@
 		
 		console.log(event);
 		getAttrs(["Fool-Circle1", "Fool-Cross1", "Fool-Circle2", "Fool-Cross2", "Fool-Circle3", "Fool-Cross3", "Fool-Circle4", "Fool-Cross4", "Fool-Circle5", "Fool-Cross5", "Fool-Circle6", "Fool-Cross6",], v => {
-			console.log(v);
 			startRoll("&{template:fool} {{name=@{character_name}}} {{roll=[[1d6]]}} {{result=[[0]]}} {{isCross=[[0]]}} {{isCircle=[[0]]}}", (results) => {
 				let foolRoll = results.results.roll.result;
 				
@@ -3839,10 +4237,6 @@
 					cross = v["Fool-Cross6"] == 'on' ? 1 : 0;
 					circle = v["Fool-Circle6"] == 'on' ? 1 : 0;
 				}
-				
-				console.log(cross);
-				console.log(circle);
-				console.log(foolRoll);
 				
 				finishRoll(results.rollId,
 					{

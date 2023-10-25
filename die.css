@@ -3,7 +3,10 @@ div.sheet-Fool,
 div.sheet-Emotion-Knight,
 div.sheet-Neo,
 div.sheet-Godbinder,
-div.sheet-Master
+div.sheet-Master,
+div.sheet-MasterPC,
+div.sheet-NPC,
+div.sheet-Fallen
 {
     display: none;
 }
@@ -13,7 +16,10 @@ input[type="radio"][value="2"]:checked ~ div.sheet-Fool,
 input[type="radio"][value="3"]:checked ~ div.sheet-Emotion-Knight,
 input[type="radio"][value="4"]:checked ~ div.sheet-Neo,
 input[type="radio"][value="5"]:checked ~ div.sheet-Godbinder,
-input[type="radio"][value="6"]:checked ~ div.sheet-Master
+input[type="radio"][value="6"]:checked ~ div.sheet-Master,
+input[type="radio"][value="7"]:checked ~ div.sheet-MasterPC,
+input[type="radio"][value="8"]:checked ~ div.sheet-NPC,
+input[type="radio"][value="9"]:checked ~ div.sheet-Fallen
 {
     display: block;
 }
@@ -21,7 +27,9 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 .vent-button,
 .gifts-button,
 .gods-button,
-input[type="radio"][value="6"]:checked ~ div button.advancement-button
+input[type="radio"][value="6"]:checked ~ div button.advancement-button,
+input[type="radio"][value="8"]:checked ~ div button.advancement-button,
+input[type="radio"][value="9"]:checked ~ div button.advancement-button
 {
 	display: none;
 }
