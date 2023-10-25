@@ -20,7 +20,8 @@ input[type="radio"][value="6"]:checked ~ div.sheet-Master
 
 .vent-button,
 .gifts-button,
-.gods-button
+.gods-button,
+input[type="radio"][value="6"]:checked ~ div button.advancement-button
 {
 	display: none;
 }
@@ -49,6 +50,7 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 .sheet-tabstoggle[value="gods"] ~ div > div.sheet-gods {
     display: block;
 }
+
 
 .sheet-move_radio{
 	display:inline-block!important;
@@ -83,6 +85,12 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 {
 	display: grid;
 	grid-template: 7% 15% 15% 1fr 1fr/20% 1fr;
+}
+
+.page1-grid-master
+{
+	display: grid;
+	grid-template: 8% 15% 18% 1fr 1fr/20% 1fr;
 }
 
 .page1-header1
@@ -296,11 +304,11 @@ hr {
 
 /* Button Formatting */
 
-button[type="roll"].stat-button:before{
+button.stat-button:before{
   content: ' '!important;
 }
 
-button[type="roll"].stat-button
+button.stat-button
 {
 	border-style: none;
 	background-color: transparent;
@@ -308,85 +316,28 @@ button[type="roll"].stat-button
 	box-shadow: none;
 }
 
-button[type="roll"].stat-button:hover{
+button.stat-button:hover{
     background-color: #d9d9d9;
     border-radius: 10px;
 }
 
 /* ROLL TEMPLATE */
 
-.sheet-rolltemplate-mh2 table {
-    margin-left: -45px;
-    margin-right: -1px;
-    width: 280px;
-    height: 165px;
-    padding: 0px;
- 	background: url(http://i.imgur.com/7hM6C1Z.gif) top left;
-    background-size: 280px 165px; 
-    background-repeat: no-repeat;
-    font-family: "Baskerville", "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
-	border-spacing:0;
-}
- 
-.sheet-rolltemplate-mh2 th {
-    color: rgb(250, 250, 250);
-	font-size: 1.7em;
-    text-align: left;
-    font-family: "Baskerville";
-    color: white;
-    text-shadow:
-    -1px -1px 0 #dc1921,  
-     1px -1px 0 #dc1921,
-    -1px  1px 0 #dc1921,
-     1px  1px 0 #dc1921;
-	border-style:solid;
-	border-width:0px;
-	vertical-align:bottom;
-	height: 30px;
+.sheet-rolltemplate-die table, .sheet-rolltemplate-fool table {
+  border: 0px solid black;
+  width: 100%;
 }
 
- 
-.sheet-rolltemplate-mh2 td {
-    vertical-align: top;
-    font-family: "Baskerville";
-	border-style:solid;
-	border-width:0px;
-	height: 30px;
-	font-size: 1em;
-	vertical-align:center;
-    color: #ffffff;
+.sheet-rolltemplate-die td, .sheet-rolltemplate-fool td {
+  padding: 5px;
+  font-family: "Cardo";
 }
 
- 
-.sheet-rolltemplate-mh2 .sheet-result {
-    font-size: 5em;
-    text-align: center;
-	padding-top: 40px;
-} 
- 
-.sheet-rolltemplate-mh2 .inlinerollresult,
-.sheet-rolltemplate-mh2 .inlinerollresult.fullcrit,
-.sheet-rolltemplate-mh2 .inlinerollresult.fullfail,
-.sheet-rolltemplate-mh2 .inlinerollresult.importantroll{
-    background-color: transparent;
-    color: #dc1921;
-    border: none;
+.sheet-rolltemplate-die .inlinerollresult {
+  color: white;
+  font-size: 20px;
 }
 
-.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult,
-.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.fullcrit,
-.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.fullfail,
-.sheet-rolltemplate-mh2 .sheet-success .inlinerollresult.importantroll{
-    background-color: transparent;
-    color: #dc1921;
-    border: none;
-}
-
-.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult,
-.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.fullcrit,
-.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.fullfail,
-.sheet-rolltemplate-mh2 .sheet-failure .inlinerollresult.importantroll{
-    background-color: transparent;
-    color: #dc1921;
-    border: none;
+.sheet-rolltemplate-die .sheet-result {
+  width: 95px;
 }

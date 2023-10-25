@@ -21,7 +21,7 @@
 		
 		<div align="right">
 			<button type="action" name="act_basic">Basic</button>
-			<button type="action" name="act_advancement">Advancement</button>
+			<button type="action" name="act_advancement" class="advancement-button">Advancement</button>
 			<button type="action" name="act_vent" class="vent-button">Vent/Stance</button>
 			<button type="action" name="act_gifts" class="gifts-button">Gifts</button>
 			<button type="action" name="act_gods" class="gods-button">Gods</button>
@@ -77,12 +77,12 @@
 					</div>
 					<br>
 					<p align="center">
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="roll_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="roll_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="roll" class="stat-button" value="Cha" name="roll_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
 					<div class="stat-row2">
 						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
@@ -518,7 +518,7 @@
 				</div>
 				<div class="page1-header2">
 					<div class="header-class-dice">
-						<h2>CLASS DICE: D6</h2>
+						<h2>CLASS DICE:<button type="action" name="act_fool" class="stat-button" style="font-size:24px"><b>D6</b></button></h2>
 						<p>
 							You can add your D6 to your dice pool any time you’re acting in a foolish,<br>
 							daring or cavalier fashion. In any dice pool which includes the Fool’s D6, you gain:<br>
@@ -556,12 +556,12 @@
 					</div>
 					<br>
 					<p align="center">
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><b><u>Dex</u></b>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><b><u>Dex</u></b>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
 					<div class="stat-row2">
 						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
@@ -969,12 +969,12 @@
 					</div>
 					<br>
 					<p align="center">
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><b><u>Str</u></b>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex">Dex:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><b><u>Con</u></b>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="action" class="stat-button" value="Str" name="act_roll"><b><u>Str</u></b>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll">Dex:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><b><u>Con</u></b>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
 					<div class="stat-row2">
 						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
@@ -1734,12 +1734,12 @@
 					</div>
 					<br>
 					<p align="center">
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><b><u>Dex</u></b>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><b><u>Int</u></b>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><b><u>Dex</u></b>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><b><u>Int</u></b>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
 					<div class="stat-row2">
 						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
@@ -2633,12 +2633,12 @@
 					</div>
 					<br>
 					<p align="center">
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Strength}} {{Roll=[[@{Str}d6+?{+/- forward?|0}]]}}" name="roll_Str"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Dexterity}} {{Roll=[[@{Dex}d6+?{+/- forward?|0}]]}}" name="roll_Dex"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Constitution}} {{Roll=[[@{Con}d6+?{+/- forward?|0}]]}}" name="roll_Con"><b><u>Con</u></b>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Intelligence}} {{Roll=[[@{Int}d6+?{+/- forward?|0}]]}}" name="roll_Int"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Wisdom}} {{Roll=[[@{Wis}d6+?{+/- forward?|0}]]}}" name="roll_Wis"><b><u>Wis</u></b>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
-						<button type="roll" class="stat-button" value="&{template:default} {{name=@{CharName} rolled with Charisma}} {{Roll=[[@{Cha}d6+?{+/- forward?|0}]]}}" name="roll_Cha">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><b><u>Con</u></b>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><b><u>Wis</u></b>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll">Cha:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
 					</p>
 					<div class="stat-row2">
 						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
@@ -3294,14 +3294,14 @@
 								<b>Abilities:</b> Cannot fight.<br>
 								For each level you have in the god, pick an upgrade (each can be picked more than once):
 								<div class="sheet-2colrow">
-									<div class="sheet-col">
+									<div class="sheet-col" style="margin-right:0px;width:48%">
 										<ul>
 											<li><b>+1 Str</b> (max 4)</li>
 											<li><b>+1 Con</b> (max 4)</li>
 											<li><b>+1 Defence</b> (max 4)</li>
 										</ul>
 									</div>
-									<div class="sheet-col">
+									<div class="sheet-col" style="margin-right:0px;width:48%">
 										<ul>
 											<li>It can fight.</li>
 											<li>It’s invulnerable to a hazard (fire, cold, etc).</li>
@@ -3521,7 +3521,8 @@
 						<tr>
 							<td class="god-level">3</td>
 							<td>
-								<b>The Great Flood:</b> Waves crash into the surrounding area as if from nowhere, and the water level rapidly begins to rise. Roll a <b>Wis</b> pool to summon the flood. On a success, the flood is here. You can walk on the water, or move through it without penalty; everyone else suffers one Disadvantage to all actions. <i><b>Special:</b> raise the water further— everyone suffers a 2nd disadvantage.</i><br>
+								<b>The Great Flood:</b> Waves crash into the surrounding area as if from nowhere, and the water level rapidly begins to rise. Roll a <b>Wis</b> pool to summon the flood. On a success, the flood is here. You can walk on the water, or move through it without penalty; everyone else suffers one Disadvantage to all actions.<br>
+								<i><b>Special:</b> raise the water further— everyone suffers a 2nd disadvantage.</i><br>
 								Every turn the water remains, choose one effect:
 								<ul>
 									<li>Attack everyone in the water with murderous fish</li>
@@ -3537,8 +3538,194 @@
 	
 	<!-- Master -->
 	<div class="sheet-Master" name="sheet-Master">
-		The Master
+		<div class="sheet-basic">
+			<div class="page1-grid-master">
+				<div class="page1-header1">
+					<h1>THE MASTER (GM)</h1>
+					<b><i><span>Name</span>:</i></b> <input type="text" name="attr_CharName" style="width: 70%"/><br>
+					<b><i><span>Pronouns</span>:</i></b> <input type="text" name="attr_Pronouns" style="width: 55%"/>
+				</div>
+				<div class="page1-header2">
+					<div class="header-class-dice">
+						<h2>CLASS DICE: D20</h2>
+						<p>
+							MASTERY<br>
+							Your Master has Mastery: they can add their D20 when casting spells. If they do, the dice roll has the 20-special (activated on a 20):<br>
+							<i><p>20-Special:</b> this success counts as two successes.</i>
+						</p>
+					</div>
+					<div class="header-die-image">
+						<img src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ExplodedDice/D20.png?raw=true" style="height: 100px">
+					</div>
+				</div>
+				<img class="paragon-picture" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/ParagonImage/Master.jpg?raw=true">
+				<div class="page1-sidebar">
+					<br>
+					<i>
+						<p>Who rules?</p>
+						<p>The Master is the magic user as a reality manipulator. Sometimes you change the laws of physics. Sometimes you change the laws of the game. Sometimes you change the laws of fiction.</p>
+						<p>The Rules rule, and you rule the Rules. And you never, ever cheat.</p>
+						<p>Ever.</p>
+						<p>Oh, this is the GM section. We can be honest.</p>
+						<p>You cheat all the time.</p>
+					</i>
+					<br>
+					<h3>PLAY THE MASTER IF YOU WANT TO...</h3>
+					<ul>
+						<li>Facilitate the game.</li>
+						<li>Break the rules of space, time and narrative to cast powerful magic</li>
+						<li>Cheat reality to get what you want at great risk</li>
+					</ul>
+				</div>
+				<img class="core-mechanic" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/CoreMechanic.jpg?raw=true">
+				<div class="page1-stats">
+					<br>
+					<div class="sheet-2colrow black-header">
+						<div class="sheet-col" style="text-align: left;color:#FFFFFF;font-size: 30px"><b><span>STATS</span></b></div>
+						<div class="sheet-col" style="text-align: right">All stats start at 2, plus 2 points assigned as you wish.<br>Get an extra point every 3 levels</div>
+					</div>
+					<br>
+					<p align="center">
+						<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+						<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+						<button type="action" class="stat-button" value="Cha" name="act_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+					</p>
+					<div class="stat-row2">
+						<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+						<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+						<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+					</div>
+					<hr>
+				</div>
+				<div class="page1-equip sheet-2colrow">
+					<div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>EQUIPMENT</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master1">
+							<span>
+								<b>Quarterstaff.</b><br>
+								<i><b>Special:</b> recover 1 <b>Guard</b>.</i>
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master2">
+							<span>
+								<b>An elegant handgun.</b><br>
+								<i><b>Special:</b> if a hit <b>Wounds</b>, it does 2 <b>Wounds</b> against unarmoured foes.</i>
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master3">
+							<span>
+								<b>A huge tome.</b><br>
+								Advantage on tasks involving research, heavy enough to be an improvised club.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Equipment-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-equip-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				   <div class="sheet-col">
+						<div class="sheet-2colrow">
+							<div class="sheet-col"><b><span>YOUR LOOK</span></b></div>
+							<div class="sheet-col grey-right-text"><span>PICK ONE</span></div>
+						</div>
+						<span>You are wearing (<b>Defense 0</b>)</span>
+						<p>
+							<input type="checkbox" name="attr_Look-Master1">
+							<span>
+								Wizard robes straight out of a 1980s kids fantasy cartoon.
+							</span> 
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master2">
+							<span>
+								Killer suits straight off a 1980s corporate bad guy.
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master3">
+							<span>
+								Fetish-wear straight out of a 1990s vampire LARP
+							</span>
+						</p>
+						<p>
+							<input type="checkbox" name="attr_Look-Master4">
+							<span>
+								Something else: <input type="text" name="attr_master-look-other" style="width: 1fr">
+							</span>
+						</p>
+				   </div>
+				</div>
+				<div class="page1-other">
+					<hr>
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<h3><span>HARDCORE CHEATING</span></h3>
+							<div class="sheet-2colrow">
+								<div class="sheet-col">
+									<h3 class="grey-text"><i>Cheat Tokens</i></h3>
+								</div>
+								<div class="sheet-col">
+									<input type="number" name="attr_CheatTokens" min="0" max="10" style="width: 45px;float: right">
+								</div>
+							</div>
+							<p>
+								The Master’s control of the rules is such they can actively break them. This is called Cheating: altering the game in a special way. You can only safely use these abilities by spending <b>Cheat Tokens</b>.
+							</p>
+							<p>
+								At the start of each session, gain <b>Cheat Tokens</b> equivalent to the number of other players in the game. When a combat begins, check the number of players who are opposing the Master. If you have more <b>Cheat Tokens</b> than players who are opposing you, reduce your <b>Cheat Tokens</b> to that number.
+							</p>
+							<p>
+								To cheat, spend a Cheat Token (and in combat, use an action), then pick an effect:
+								<ul>
+									<li><b>A miraculous event:</b> Teleport to escape. Create a temptation that fulfills a desire. Summon a hugely powerful monster. Create a fortress. Regain your mastery. Bend a rule.</li>
+									<li><b>Undo the effects of what has just happened:</b> Uniquely, this can be done as an instant response (i.e. if you are killed, you regenerate from the harm.)</li>
+								</ul>
+							</p>
+							<p>
+								If you have no cheat tokens remaining, you can still Cheat, but are risking your existence. Hide your D20 in one of two identical hiding places (e.g. your hands). Another player picks a hiding place.
+							</p>
+							<p>
+								<ul>
+									<li>If they choose incorrectly, you get away with it and the effect happens.</li>
+									<li>If they find it, the Powers That Be notice you. These are the judges of all reality, and they do not approve of Masters cheating. Your Master will not survive their attention.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="sheet-col">
+							<h3>MY WORLD, MY RULES</h3>
+							<p>
+								The Master has control over the nature of reality in the world they’re visiting—both the rules of the world, the rules of the game and the rules of narrative. This means they can easily perform magical effects equivalent to anything a powerful wizard can do.
+							</p>
+							<p>
+								Like any NPC, the Master can perform any spell you think reasonable and likely, based upon character conception. They can fly, throw fireballs, turn invisible, heal people, create incredible firework displays and generally be a wizard. The exception to this is any magical effect potent enough to match the <b>Hardcore Cheats</b>.
+							</p>
+							<p>
+								Any attack they make can have <i><b>Special:</b> ignite opponent, inflicting 1 hit per round until extinguished.</i>
+							</p>
+							<h3>MASTER ADVANCEMENT</h3>
+							<p>
+								If your game is including advancement, Masters advance whenever players do. The only advance in the basic Master is to gain a statistic point any time the rest of the group does. They gain no other abilities. They’re already brutally powerful thanks to the cheat tokens.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	
+	
 	<br><br>
 	<font size="0.5">sheet version 0.0.1 for DIE<br>
 	</font>
@@ -3560,100 +3747,144 @@
                 sheetTab: "basic"
 		});
 	});
+	
+	const getQuery = async (queryText) => {
+		const rxGrab = /^0\[(.*)\]\s*$/;
+		let rollBase = `! {{query1=[[ 0[${queryText}] ]]}}`, // just a [[0]] roll with an inline tag
+			queryRoll = await startRoll(rollBase),
+			queryResponse = (queryRoll.results.query1.expression.match(rxGrab) || [])[1]; 
+		finishRoll(queryRoll.rollId); // you can just let this time out if you want - we're done with it
+		return queryResponse;
+	};
+	
+	on("clicked:roll", (event) => {
+		
+		console.log(event);
+		getAttrs([event.htmlAttributes.value], v => {
+			let statvalue = (v[Object.keys(v)[0]]) ?? 0;
+			let statname = Object.keys(v)[0];
+			console.log("Stat Name: "+statvalue);
+			console.log("Stat Value: "+statvalue);
+			var question = "?{Advantages|0|1|2|3|-1|-2|-3}";
+			
+			getQuery(question).then(bonusdice => {
+				console.log("Bonus Dice: "+bonusdice);
+				var numdice = parseInt(statvalue,10) + parseInt(bonusdice,10);
+				//This will make sure to give the value of zero instead of null
+				if(!numdice){
+					numdice = 0;
+				}
+				var rollexpr = "";
+				if(numdice == 0){
+					rollexpr = "&{template:die} {{name=@{character_name}}} {{roll_name="+statname+"}} {{stat_name="+statname+"}} {{roll=[[2d6kl1]]}} {{dice=[[0]]}}";
+				} else {
+					rollexpr = "&{template:die} {{name=@{character_name}}} {{roll_name="+statname+"}} {{stat_name="+statname+"}} {{roll=[["+numdice+"d6kh1]]}} {{dice=[[0]]}}";
+				}
+				console.log(rollexpr);
+				startRoll(rollexpr, (results) => {
+					var dicelist = "";
+					console.log(results.results);
+					console.log("Dice: "+results.results.roll.dice);
+					results.results.roll.dice.forEach(die => {
+						dicelist = dicelist + die + " | "
+					});
+					finishRoll(results.rollId,
+						{
+							dice: dicelist
+						}
+					);
+				});
+			});
+		});
+	});
+	
+	on("clicked:fool", (event) => {
+		
+		console.log(event);
+		getAttrs(["Fool-Circle1", "Fool-Cross1", "Fool-Circle2", "Fool-Cross2", "Fool-Circle3", "Fool-Cross3", "Fool-Circle4", "Fool-Cross4", "Fool-Circle5", "Fool-Cross5", "Fool-Circle6", "Fool-Cross6",], v => {
+			console.log(v);
+			startRoll("&{template:fool} {{name=@{character_name}}} {{roll=[[1d6]]}} {{result=[[0]]}} {{isCross=[[0]]}} {{isCircle=[[0]]}}", (results) => {
+				let foolRoll = results.results.roll.result;
+				
+				var cross = 0;
+				var circle = 0;
+				
+				if(foolRoll == 1)
+				{
+					cross = v["Fool-Cross1"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle1"] == 'on' ? 1 : 0;
+				}
+				else if(foolRoll == 2)
+				{
+					cross = v["Fool-Cross2"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle2"] == 'on' ? 1 : 0;
+				}
+				else if(foolRoll == 3)
+				{
+					cross = v["Fool-Cross3"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle3"] == 'on' ? 1 : 0;
+				}
+				else if(foolRoll == 4)
+				{
+					cross = v["Fool-Cross4"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle4"] == 'on' ? 1 : 0;
+				}
+				else if(foolRoll == 5)
+				{
+					cross = v["Fool-Cross5"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle5"] == 'on' ? 1 : 0;
+				}
+				else if(foolRoll == 6)
+				{
+					cross = v["Fool-Cross6"] == 'on' ? 1 : 0;
+					circle = v["Fool-Circle6"] == 'on' ? 1 : 0;
+				}
+				
+				console.log(cross);
+				console.log(circle);
+				console.log(foolRoll);
+				
+				finishRoll(results.rollId,
+					{
+						result: foolRoll,
+						isCross: cross,
+						isCircle: circle
+					}
+				);
+			});
+		});
+	});
 </script>
 
 
-<rolltemplate class="sheet-rolltemplate-mh2">
+<rolltemplate class="sheet-rolltemplate-die">
 	<table>
-	<tr>
-		<th colspan="5"><img src="http://i.imgur.com/NYHrh2J.png">{{name}} <img src="http://i.imgur.com/Y4a3NF3.png"> {{#roll_name}} <span  data-i18n="lbl-{{roll_name}}" />{{/roll_name}}{{#roll_mod}}{{/roll_mod}}</th>
-	</tr>
-	<tr>
-		<td colspan="5"><img src="http://i.imgur.com/NYHrh2J.png">{{comment}}</td>
-	</tr>
-	<tr>
-		<td class="result success" rowspan ="3" style="width: 80px">{{result}}</td>
-		<td colspan="4"></td>
-	</tr>
-	<tr>
-			  <td style="width: 30px"></td>
-			{{#rollTotal() result 15}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 15}}
-			{{#rollTotal() result 14}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 14}}
-			{{#rollTotal() result 13}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 13}}
-			{{#rollTotal() result 12}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 12}}
-			{{#rollTotal() result 11}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 11}}
-			{{#rollTotal() result 10}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/ijSYmKZ.png"></td>
-			{{/rollTotal() result 10}}
-			{{#rollTotal() result 9}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
-			{{/rollTotal() result 9}}
-			{{#rollTotal() result 8}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
-			{{/rollTotal() result 8}}
-			{{#rollTotal() result 7}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/8IqLjkG.png"></td>
-			{{/rollTotal() result 7}}
-			{{#rollTotal() result 6}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 6}}
-			{{#rollTotal() result 5}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 5}}
-			{{#rollTotal() result 4}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 4}}
-			{{#rollTotal() result 3}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 3}}
-			{{#rollTotal() result 2}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 2}}
-			{{#rollTotal() result 1}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 1}}
-			{{#rollTotal() result 0}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result 0}}
-			{{#rollTotal() result -1}}
-			  <td rowspan ="3"><img src="http://i.imgur.com/IJBloDk.png"></td>
-			{{/rollTotal() result -1}}      
-	</tr>
-	<tr>
-			{{#rollTotal() result 6}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 6}}
-			{{#rollTotal() result 5}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 5}}
-			{{#rollTotal() result 4}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 4}}
-			{{#rollTotal() result 3}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 3}}
-			{{#rollTotal() result 2}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 2}}
-			{{#rollTotal() result 1}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 1}}
-			{{#rollTotal() result 0}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result 0}}
-			{{#rollTotal() result -1}}
-			  <td colspan="4"><img src="http://i.imgur.com/Z4MvPRa.png"></td>
-			{{/rollTotal() result -1}}  
-	</tr>
+		<tr> 
+			<td colspan="2">{{name}} rolled {{#stat_name}} {{stat_name}}{{/stat_name}}{{#roll_mod}}({{roll_mod}}){{/roll_mod}}</td>
+		</tr>
+		<tr>
+			<td>{{computed::dice}}</td>
+		</tr>
+	</table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-fool">
+	<table>
+		<tr> 
+			<td><b>{{name}} rolled the Fool's Die!<b></th>
+		</tr>
+		<tr>
+			<td>{{computed::result}}</td>
+		</tr>
+		{{#rollTotal() computed::isCircle 1}}
+		<tr>
+			<td>You rolled a Circle!</td>
+		</tr>
+		{{/rollTotal() computed::isCircle 1}}
+		{{#rollTotal() computed::isCross 1}}
+		<tr>
+			<td>You rolled a Cross!</td>
+		</tr>
+		{{/rollTotal() computed::isCross 1}}
 	</table>
 </rolltemplate>
