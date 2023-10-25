@@ -27,6 +27,8 @@ input[type="radio"][value="9"]:checked ~ div.sheet-Fallen
 .vent-button,
 .gifts-button,
 .gods-button,
+.rules-button,
+.cheats-button,
 input[type="radio"][value="6"]:checked ~ div button.advancement-button,
 input[type="radio"][value="8"]:checked ~ div button.advancement-button,
 input[type="radio"][value="9"]:checked ~ div button.advancement-button
@@ -36,7 +38,9 @@ input[type="radio"][value="9"]:checked ~ div button.advancement-button
 
 input[type="radio"][value="3"]:checked ~ div button.vent-button,
 input[type="radio"][value="4"]:checked ~ div button.gifts-button,
-input[type="radio"][value="5"]:checked ~ div button.gods-button
+input[type="radio"][value="5"]:checked ~ div button.gods-button,
+input[type="radio"][value="7"]:checked ~ div button.rules-button,
+input[type="radio"][value="7"]:checked ~ div button.cheats-button
 {
 	display: inline-block;
 }
@@ -46,7 +50,9 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 .sheet-advancement,
 .sheet-vent,
 .sheet-gifts,
-.sheet-gods {
+.sheet-gods,
+.sheet-rules,
+.sheet-cheats {
     display: none;
 }
 
@@ -55,7 +61,9 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 .sheet-tabstoggle[value="advancement"] ~ div > div.sheet-advancement,
 .sheet-tabstoggle[value="vent"] ~ div > div.sheet-vent,
 .sheet-tabstoggle[value="gifts"] ~ div > div.sheet-gifts,
-.sheet-tabstoggle[value="gods"] ~ div > div.sheet-gods {
+.sheet-tabstoggle[value="gods"] ~ div > div.sheet-gods,
+.sheet-tabstoggle[value="rules"] ~ div > div.sheet-rules,
+.sheet-tabstoggle[value="cheats"] ~ div > div.sheet-cheats {
     display: block;
 }
 
@@ -236,18 +244,7 @@ input[type="radio"][value="5"]:checked ~ div button.gods-button
 	width: 100%;
 }
 
-select.sheet-SkinSelect 
-{
-    position: relative;
-    top: 4px;
-}
-
 input[type="radio"] 
-{
-    display: none;
-}
-
-option.sheet-SkinSelect:checked   
 {
     display: none;
 }
@@ -294,7 +291,7 @@ h1 {
 	font-weight: bold;
 }
 
-.god-table tr
+.god-table tr, .cheat-table tr
 {
 	border-top: 1pt solid black;
 }

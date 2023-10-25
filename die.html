@@ -31,6 +31,8 @@
 			<button type="action" name="act_vent" class="vent-button">Vent/Stance</button>
 			<button type="action" name="act_gifts" class="gifts-button">Gifts</button>
 			<button type="action" name="act_gods" class="gods-button">Gods</button>
+			<button type="action" name="act_rules" class="rules-button">Rules</button>
+			<button type="action" name="act_cheats" class="cheats-button">Cheats</button>
 		</div>
 	</div>
 
@@ -3923,11 +3925,475 @@
 				</div>
 			</div>
 		</div>
-		
+		<div class="sheet-advancement">
+			<div class="page2-grid">
+				<div class="page2-col1">
+					<h1 class="black-header">MASTER ADVANCEMENTS</h1>
+					<h2>NEW RULE</h2>
+					<p>Your understanding of the fundamental forces that underpin reality grows ever deeper. Pick a new rule.</p>
+					<h2>READING THE RULES</h2>
+					<p>
+						When you enter an environment that is under the power of another Master (or similar reality-controlling force), you’re aware of it.
+						<ul>
+							<li>
+								You may roll an <b>Int</b> pool to ask the GM one question per success about the nature of the realm you’re in.
+							</li>
+							<li>
+								You may roll an <b>Wis</b> pool to ask the GM one question per success about the nature of the Master.
+							</li>
+						</ul>
+						A fail alerts the Master to your presence. On a critical fail you hit a trap: the Master may attack you with a spell of their choice.
+					</p>
+					<h2>SLOW AND STEADY</h2>
+					<p>
+						Between adventures, you may perform a <b>Hardcore Cheat</b> without being caught. This cannot be at the <b>Outrageous</b> level.
+					</p>
+					<h2>FURTHER MASTERY</h2>
+					<p>
+						Pick one of these abilities, or gain a New Rule.<br>
+						<input type="checkbox" name="attr_FurtherMastery1">
+						<span>
+							<b>A Great Rule.</b> Choose one of your rules. You can now use it as “slightly more than the rule” as if it were the normal definition of the rule – you can push it a little without gaining <b>Risk</b>.
+						</span><br>
+						<input type="checkbox" name="attr_FurtherMastery2">
+						<span>
+							<b>Extra Mastery (Pick Once).</b> You have two stacks of Mastery, and so can lose Mastery once and still retain your Mastery abilities and ability to cast spells with <b>Risk</b>. Both stacks refresh at the start of each session.
+						</span><br>
+						<input type="checkbox" name="attr_FurtherMastery3">
+						<span>
+							<b>Multimaster.</b> You shake off the petty fetters of GNS theory. The first time you take this, pick a second Master type – you may now perform <b>Minor</b> cheats in that domain. If you take this again, raise the tier of cheats you can perform in that domain by one, or unlock a third domain starting at <b>Minor</b>.
+						</span>
+					</p>
+					<h2>A DUNGEON OF ONE’S OWN</h2>
+					<p>
+						The Master creates their own dungeon in a pocket dimension. Choose how it’s accessed…
+						<input type="checkbox" name="attr_OwnDungeon1">
+						<span>
+							Via a real doorway.<br>
+							<b>Pro:</b> no-one can enter unless invited. <b>Con:</b> fixed in place.
+						</span><br>
+						<input type="checkbox" name="attr_OwnDungeon2">
+						<span>
+							Via a small magical object (lamp, coin).<br>
+							<b>Pro:</b> Portable. <b>Con:</b> Can be taken from you.
+						</span><br>
+						<input type="checkbox" name="attr_OwnDungeon3">
+						<span>
+							Via a series of magical words or methods.<br>
+							<b>Pro, Con:</b> Can be accessed by anyone who knows the method.
+						</span><br>
+						You have Mastery over the dungeon, and can use Realm Master cheats within it. You are free to design the layout of the dungeon, with a number of rooms up to your level. It takes up no more space than can fit on a physical sheet of graph paper, with each square forming a 10 foot cube. You can make a digital version of your dungeon, but you must have a piece of physical graph paper to show how big it can be. Every time you go up a level you can add a room, and between adventures you can delete a room and draw up to your level total.
+					</p>
+					<h2>REALM MASTERY</h2>
+					<p>
+						You may now become Master of a region of Die. If an area has no Master, simply claim it. If it already has a Master, you must force them to surrender it. You can expand your dominion indefinitely if they’re able to claim more terrains. Within your region, you gain access to the Realm Master <b>Hardcore Cheats</b>. Also, pick a <b>FURTHER MASTERY</b> ability.
+					</p>
+					<h2>TO THE DUNGEON!</h2>
+					<p>
+						You may teleport anywhere in any realm you have mastery of, or to any place whose Master has given you permission to travel there. Define what your teleportation looks like. You can bring a party- worth of people with you.
+					</p>
+				</div>
+				<div class="page2-col2">
+					<h2>WRITING THE RULES</h2>
+					<p>
+						These abilities fundamentally change the world. To take them, you must be a Realm Master (either from Realm Mastery or a Dungeon of One’s Own), and should work the nature of your Realm into whatever you create.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_WritingRules1">
+						<b>The Handbook:</b> Work with the GM to add a whole new sort of adventurer to the world. <i>What do they do? What is their reputation? To whom do they owe allegiance? And, most importantly, why are they thought of as heroic?</i> Roll your <b>Int</b> pool with the D20: their greatest band of heroes has one member per success. They can be sent off to perform missions as per the compressed adventure rules (p. 279).<br>
+						<input type="checkbox" name="attr_WritingRules2">
+						<b>The Manual:</b> Work with the GM to add a whole new monstrous species to the world. <i>What do they look like? What do they want? To whom do they owe allegiance? And, most importantly, why are they thought of as monsters?</i> If there’s an empty region in the map of DIE, this is their homeland. If not, they emerge into your realm. They are a Great Power. Roll your <b>Int</b> pool with the D20: there is one major faction within this Great Power per success. Define them.<br>
+						<input type="checkbox" name="attr_WritingRules3">
+						<b>The Guide:</b> Work with the GM to add a whole new realm to this world. <i>What is it known for? What are the landmarks? What can be found there? And most importantly, why do people never go there?</i> Select an empty region on the map of Die to be its home. Roll your <b>Int</b> pool with the D20: for each success, define one thing which can be found in this realm. When you define it, also define what prevents people taking it.
+						<input type="checkbox" name="attr_WritingRules4">
+						<b>The Arcana:</b> Work with the GM to add a whole new form of magic to the world. <i>What is this source of power? How do people access it? What can it do? Does it have any iconic magical creatures? And, most importantly, what has prevented its discovery until now?</i> If you wish, work with the GM to create a new rule to represent this new form of magic. You now possess this rule. Roll your <b>Int</b> pool with the D20: select one extra Rule per success. Your Risk thresholds on these rules are one step down from normal: “massively more than the standard rule” adds 1 Risk, and “slightly more than the standard rule” is free.
+					</p>
+					<h2 class="black-header">AT LEVEL 20: YOUR HERESY IS NOTED.</h2>
+					<p>
+						DIE advancement assumes you will end a campaign well before the Paragons reach level 20… but if you do, this is the monster lurking there for a Master. When you reach level 20, you become all powerful for exactly one second. What do you do? You are then consumed by DIE, forever.
+					</p>
+				</div>
+				<div class="advancement-grid">
+					<img class="advancement-image" src="https://github.com/sclyonsburke/DieCharacterSheet/blob/main/Images/AdvancementMaps/MasterAdvancementMap.png?raw=true">
+					<input type="checkbox" name="attr_advancement1" style="grid-row: 2/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement2" style="grid-row: 1/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement3" style="grid-row: 1/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement4" style="grid-row: 2/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement5" style="grid-row: 3/span 1;grid-column: 3/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement6" style="grid-row: 4/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement7" style="grid-row: 3/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement8" style="grid-row: 4/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement9" style="grid-row: 3/span 1;grid-column: 9/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement10" style="grid-row: 5/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement11" style="grid-row: 6/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement12" style="grid-row: 5/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement13" style="grid-row: 7/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement14" style="grid-row: 8/span 1;grid-column: 7/span 1;height: 35%;">
+					
+					<input type="checkbox" name="attr_advancement15" style="grid-row: 9/span 1;grid-column: 4/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement16" style="grid-row: 10/span 1;grid-column: 5/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement17" style="grid-row: 9/span 1;grid-column: 7/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement18" style="grid-row: 10/span 1;grid-column: 9/span 1;height: 35%;">
+					<input type="checkbox" name="attr_advancement19" style="grid-row: 9/span 1;grid-column: 10/span 1;height: 35%;">
+				</div>
+			</div>
+		</div>
+		<div class="sheet-rules">
+			<h1 class="black-header">MASTER RULES</h1>
+			<br>
+			<b>RULES THAT CHANGE WHAT HAPPENS</b>
+			<div class="sheet-3colrow">
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_ChangeRules1">
+						<b>Damage: Barrage.</b> Damages target.<br>
+						<i><b>Double Special:</b> this hit inflicts 2 hits.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules2">
+						<b>Damage: Chain.</b> Damages target.<br>
+						<i><b>Special:</b> this hit inflicts 2 hits.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules3">
+						<b>Damage: Curse.</b> Damages target.<br>
+						<i><b>Special:</b> target suffers a Disadvantage on their next action.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules4">
+						<b>Damage: Debilitate.</b> Damages target.<br>
+						<i><b>Special:</b> target suffers a disadvantage on next action.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules5">
+						<b>Damage: Duration.</b> Damages target.<br>
+						<i><b>Special:</b> ignite opponent, doing 1 hit per round until extinguished.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules6">
+						<b>Damage: Paralyse.</b> Attack<br>
+						<i><b>Special:</b> if <b>Willpower</b> is 4 or below, immobilize target. Requires a <b>Con</b> test to break free.<br>
+						<b>Double Special:</b> if <b>Willpower</b> is 6 or below, immobilize target. Requires a <b>Con</b> test to break free.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules7">
+						<b>Damage: Precise.</b> Damages target.<br>
+						<i><b>Special:</b> this hit bypasses <b>Guard</b>.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules8">
+						<b>Damage: &#95;&#95;&#95;&#95;&#95;-Bane. </b> Select a category of creature, like undead, demons or cops. Damages target and adds <b>Special:</b> this hit causes two hits to &#91;category&#93;.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules9">
+						<b>Heal.</b> Target heals <b>1 Health.</b><br>
+						<i><b>Special:</b> heals 1 additional <b>Health</b>.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules10">
+						<b>Invisibility.</b> The target becomes invisible. The spell ends if the target makes hostile actions.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules11">
+						<b>Counterspell.</b> An ongoing temporary magical effect or spell is cancelled.
+					</p>
+					<br>
+					<p>
+						<b>NEGATIVE RULES</b><br>
+						These rules make an ability more powerful, at a cost. For each added to the spell, pick one:
+					</p>
+					<ul>
+						<li>
+							Add <i><b>Special:</b> this success counts double</i>
+						</li>
+						<li>
+							Reduce the <b>Risk</b> by 5.
+						</li>
+					</ul>
+					<p>
+						<input type="checkbox" name="attr_NegativeRules1">
+						<b>Component.</b> The spell requires a hardto-come-by, thematically-relevant component to work.<br>
+						<input type="checkbox" name="attr_NegativeRules2">
+						<b>Blood Cost.</b> Causes 1 <b>Wound</b> to the caster, or a bound and prepared target, when cast.<br>
+						<input type="checkbox" name="attr_NegativeRules3">
+						<b>Taint of Damnation.</b> Suffer at least one disadvantage on any social check for the rest of the adventure.<br>
+						<input type="checkbox" name="attr_NegativeRules4">
+						<b>Secrets.</b> You must share one secret with someone who doesn’t know it. This secret must be meaningful to them, or cause a significant cost to you.<br>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_ChangeRules12">
+						<b>Enhance &#95;&#95;&#95;&#95;&#95;.</b> Adds an Advantage on the defined task/stat.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules13">
+						<b>Hinder &#95;&#95;&#95;&#95;&#95;.</b> Adds a Disadvantage on the defined task/stat.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules14">
+						<b>Illusion.</b> Causes a single human-sized object to appear as something other than it is.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules15">
+						<b>Manipulate Mechanism.</b> Make a single mechanism perform a single action.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules16">
+						<b>Detect &#95;&#95;&#95;&#95;&#95;.</b> You notice the presence of a single noun (magic, death, gold, sadness) though uncanny means.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules17">
+						<b>Create Wall.</b> Create an object that must be destroyed before it can be passed over. The health of the object is equal to twice the successes rolled when creating it. It crumbles to nothingness within an hour.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules18">
+						<b>Create Obstacle.</b> Create a patch of difficult ground or awkward terrain. Those who wish to traverse must succeed in a stat roll of the caster’s choice.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules19">
+						<b>Sleep.</b> Make an attack which does no damage, but has the capacity to send targets to sleep until awoken by jostling or a loud noise.<br>
+						<i><b>Special:</b> if the target has 4 Willpower or less, they fall asleep.<br>
+						<b>Double-Special:</b> if the target has 6 Willpower or less, they fall asleep.<br>
+						<b>20-Special:</b> the target falls asleep.</i>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules20">
+						<b>Understand &#95;&#95;&#95;&#95;&#95;.</b> Choose a noun: a language, animal, the dead, something else. You can comprehend the target.
+					</p>
+					<br>
+					<p>
+						<b>RULES THAT CHANGE WHO IS TARGETED</b>
+						<p>
+							<input type="checkbox" name="attr_TargetRules1">
+							<b>Range.</b> The effect is able to reach as far as medium range.
+						</p>
+						<p>
+							<input type="checkbox" name="attr_TargetRules2">
+							<b>Area.</b> Affect all within melee range of the target area.
+						</p>
+						<p>
+							<input type="checkbox" name="attr_TargetRules3">
+							<b>Duration.</b> Lasts for an encounter.
+						</p>
+						<p>
+							<input type="checkbox" name="attr_TargetRules4">
+							<b>Selectivity.</b> Allows you to remove yourself from the effects of a spell.
+						</p>
+					</p>
+				</div>
+				<div class="sheet-col">
+					<p>
+						<input type="checkbox" name="attr_ChangeRules21">
+						<b>Create Creature.</b> Summon a being with actual physicality. It can either follow limited, simple commands of two words or fewer (“Get him!” “Shield me!” “Eat this!”) or act autonomously according to its own instincts (but is out of your control).
+					</p>
+					<p class="grey-background">
+						<b>SUMMONED CREATURE TRAITS</b><br>
+						<b>Stats:</b> All at 2.<br>
+						2 <b>Guard</b>, 2 <b>Health</b>, 4 <b>Willpower</b>, 0 <b>Defence</b>
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules22">
+						<b>Create Intelligence.</b> Add an active intelligence to your creation - it’s sapient now. It is capable of acting on its own discernment, and it’s about as smart as a person is, but not necessarily in exactly the same way. It has its own personality. Without <b>Create Creature</b> this rule creates a disembodied intelligence which you could probably keep in a jar.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules23">
+						<b>Exchange &#95;&#95;&#95;&#95;&#95; to &#95;&#95;&#95;&#95;&#95;.</b> Select two stats. Move a point from the first to the second.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules24">
+						<b>Intangibility.</b> Allows the target to move through objects.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules25">
+						<b>Levitation.</b> Allows an object to move freely in all directions.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules26">
+						<b>Speed.</b> Allows an object to move at the speed of a horse.
+					</p>
+					<p>
+						<input type="checkbox" name="attr_ChangeRules27">
+						<b>Telepathy.</b> A target can communicate their thoughts, vision and similar sensory information with caster.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-cheats">
+			<h1 class="black-header">MASTER CHEATS</h1>
+			<table class="cheat-table">
+				<tr>
+					<td></td>
+					<th>
+						<h1>GAMIST CHEATS</h1>
+					</th>
+					<th>
+						<h1>SIMULATIONIST CHEATS&nbsp;</h1>
+					</th>
+					<th>
+						<h1>NARRATIVIST CHEATS</h1>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<h1>MINOR</h1>
+						Standard Punishments:<br>
+						Lose Mastery, community service
+					</th>
+					<td>
+						<b>Change a minor game rule for an encounter.</b><br><br>
+						<b>Examples:</b> Players can choose to inflict non-fatal injury with no consequences. When a character moves, they can move two range bands not one.
+					</td>
+					<td>
+						<b>Highly unlikely events happen.</b><br><br>
+						<b>Examples:</b> A once-in-a-decade storm hits a coastal town. You find an oasis in a desert.
+					</td>
+					<td>
+						<b>Summon an established element into narrative.</b><br><br>
+						<b>Examples:</b> The famous thief everyone’s been talking about arrives on the scene.
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<h1>MAJOR</h1>
+						Standard Punishments:<br>
+						1-2 Wounds, ongoing curses until task completed
+					</th>
+					<td>
+						<b>Change a major game rule for an encounter.</b><br><br>
+						<b>Examples:</b> Players don’t die if they end a fight on <b>0 Health</b>. You can regain Mastery at a time other than the start of a session.
+					</td>
+					<td>
+						<b>Extremely unlikely events happen.</b><br><br>
+						<b>Examples:</b> A record-breaking tidal wave hits a coastal town. A rainstorm in a desert.
+					</td>
+					<td>
+						<b>Establish a new fact about something in the existing narrative.</b><br><br>
+						<b>Examples:</b> The famous thief arrives on the scene… and loves helping out dimension-skipping adventurers.
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<h1>OUTRAGEOUS</h1>
+						Standard Punishments:<br>
+						Death
+					</th>
+					<td>
+						<b>Overturn or create a limited exception to a major existing game rule, especially those used by a Paragon.</b><br><br>
+						<b>Examples:</b> Dictators cannot use their Voice. Advantages no longer add a dice to the dice pool.
+					</td>
+					<td>
+						<b>Break fundamental laws of physics.</b><br><br>
+						<b>Examples:</b> A record-breaking tidal wave hits an inland town. Sand is edible.
+					</td>
+					<td>
+						<b>Introduce a whole new element to the fiction of your own design.</b><br><br>
+						<b>Examples:</b> “Hey – there’s this awesome thief in this world, and they love helping out dimensionskipping adventurers. And they’re standing just over there!”
+					</td>
+				</tr>
+			</table>
+			<br><br>
+			<div class="sheet-2colrow">
+				<div class="sheet-col" style="width:33%">
+					<h3>REALM MASTER CHEATS</h3>
+					<p>
+						Most Masters wish to gain magical dominion over a portion of the world they’re in–a dungeon, a realm or even the whole world for those who would wish to be Grandmaster. Only one Master can have mastery over any given area, so it’s a regular cause of battles between them.
+					</p>
+					<p>
+						If a Master achieves mastery of an area via the <b>Realm Mastery</b> advance, they gain access to these cheats when in that area, in addition to any others they know:
+					</p>
+					<p>
+						<b>A MIRACULOUS EVENT.</b>
+						<ul>
+							<li>
+								<b>Examples:</b> create a temptation that fulfils a desire. Summon a monster. Create a fortress. Regain your Mastery. Bend a rule.
+							</li>
+							<li>
+								<b>Possible punishment:</b> Death.
+							</li>
+						</ul>
+					</p>
+					<p>
+						<b>PREVENT ANY SINGLE EVENT THAT HAS JUST HAPPENED.</b>
+						<ul>
+							<li>
+								<b>Examples:</b> Stop your own death. Twist things so that you didn’t fall asleep at the wheel and kill them. Change an RPG manuscript to include significant meta-textual references even after several editors tried to remove most of them.
+							</li>
+							<li>
+								<b>Possible punishment:</b> Compulsory instant death, no exceptions.
+							</li>
+						</ul>
+					</p>
+				</div>
+				<div class="sheet-col" style="width:62%">
+					<h3>A LIST OF PUNISHMENTS</h3>
+					An array of punishments, of broadly increasing severity, that you may have to suffer:
+					<div class="sheet-2colrow">
+						<div class="sheet-col">
+							<ul>
+								<li>
+									<b>Losing Mastery:</b> The basic punishment.
+								</li>
+								<li>
+									<b>Community Service:</b> A specific task a player must complete or face further punishment. Deal with a problem. Confess your secret evils to an unknowing friend. Wear a sign saying that you have messed with reality and promise never to do it again.
+								</li>
+								<li>
+									<b>Suffering Wounds:</b> Don’t just consider this an annoyance. Remember: pain is pain.
+								</li>
+								<li>
+									<b>Curses:</b> Some in-game disadvantage, either mechanical or a narrative, or both. Temporary reduction of stats or loss of access to powers, accompanied by suitably uncanny visual effects. You see a Master with a forked tongue, and you know what happened to them.
+								</li>
+								<li>
+									<b>The Cheat Not Happening:</b> Making whatever they were going for simply not happen. Very much insult to injury.
+								</li>
+								<li>
+									<b>An Ironic Inversion or Expansion of the Cheat:</b> The Sorcerer’s Apprentice is a classic for a reason. You want a fireball to fill a room? The fireball fills the whole city. Return your friend to life? Now your nemesis crawls from the grave. You wished to hear <i>The Specials</i> play one more gig? You’re dealing with a Ska revival.
+								</li>
+							</ul>
+						</div>
+						<div class="sheet-col">
+							<ul>
+								<li>
+									<b>Quests:</b> Like Community Service, but more long-term. A big, difficult-to-achieve thing.
+								</li>
+								<li>
+									<b>Instant Death:</b> Anything which is active 100% game-breaking cheating will likely get this. Of course, death is part of the game in DIE too.
+								</li>
+								<li>
+									<b>Death and Collateral Damage:</b>  Some cheats are so loathsome the Powers That Be will not allow it to stand. Cheating which attempts to bring down the whole structure of DIE is likely to reach this level. At this point, expect those around you and your friends to be hit too, especially if they were going to gain from your cheating.
+								</li>
+								<li>
+									<b>Hell:</b> Trapping you in an eternal hellish pain which destroys you mentally and physically and leaves no room for resurrection or escape. Death is a mercy. Sometimes, if a Master is bad enough, there’s no mercy.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<div class="sheet-NPC" name="sheet-NPC">
-
+		<div>
+			<p align="center">
+				<button type="action" class="stat-button" value="Str" name="act_roll"><span>Str</span>:</button> <input type="number" name="attr_Str" min="0" max="4" style="width: 45px"> &nbsp; 
+				<button type="action" class="stat-button" value="Dex" name="act_roll"><span>Dex</span>:</button> <input type="number" name="attr_Dex" min="0" max="4" style="width: 45px"> &nbsp;
+				<button type="action" class="stat-button" value="Con" name="act_roll"><span>Con</span>:</button> <input type="number" name="attr_Con" min="0" max="4" style="width: 45px"> &nbsp;
+				<button type="action" class="stat-button" value="Int" name="act_roll"><span>Int</span>:</button> <input type="number" name="attr_Int" min="0" max="4" style="width: 45px"> &nbsp;
+				<button type="action" class="stat-button" value="Wis" name="act_roll"><span>Wis</span>:</button> <input type="number" name="attr_Wis" min="0" max="4" style="width: 45px"> &nbsp;
+				<button type="action" class="stat-button" value="Cha" name="act_roll"><b><u>Cha</u></b>:</button> <input type="number" name="attr_Cha" min="0" max="4" style="width: 45px"> &nbsp;<br>     
+			</p>
+			<div class="stat-row2">
+				<div><b>Guard</b><span class="grey-text"> =<b>Dex</b><br>Resets at the start of each fight</span></div><input type="number" name="attr_Guard" min="0" max="4" style="width: 45px;height: 28px">
+				<div><b>Health</b><span class="grey-text"> =<b>Con</b><br>Lose Guard before Health</span></div><input type="number" name="attr_Dex" min="0" max="4" style="width: 45px;height: 28px">
+				<div><b>Willpower</b><br><span class="grey-text">=<b>Wis</b>+<b>Int</b></span></div><input type="number" name="attr_Con" min="0" max="8" style="width: 45px;height: 28px">
+				<div><b>Defence</b><br><span class="grey-text">Set by Gear</span></div><input type="number" name="attr_Wis" min="0" max="4" style="width: 45px;height: 28px">     
+			</div>
+			<hr>
+		</div>
 	</div>
 	
 	<div class="sheet-Fallen" name="sheet-Fallen">
@@ -4125,7 +4591,7 @@
 
 
 <script type="text/worker">
-    const buttonlist = ["basic","advancement", "vent", "gifts", "gods"];
+    const buttonlist = ["basic","advancement", "vent", "gifts", "gods", "rules", "cheats"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({
